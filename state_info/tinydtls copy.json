@@ -1,0 +1,80 @@
+[
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 14,
+                "state_id": 1,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 13,
+                "state_id": 1,
+                "code_weight": 1,
+                "variable_weight": 1
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 8,
+                "state_id": 1,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 12,
+                "state_id": 1,
+                "code_weight": 1413,
+                "variable_weight": 12
+            }
+        ],
+        "name": "dtls_peer_t::state",
+        "state_id": 1,
+        "state_type": 1,
+        "code_weight": 608,
+        "variable_weight": 10,
+        "default_code_weight": 690,
+        "default_variable_weight": 11
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 21,
+                "state_id": 2,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 22,
+                "state_id": 2,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 23,
+                "state_id": 2,
+                "code_weight": 0,
+                "variable_weight": 0
+            }
+        ],
+        "name": "netq_t::type",
+        "state_id": 2,
+        "state_type": 2,
+        "code_weight": 0,
+        "variable_weight": 0,
+        "default_code_weight": 0,
+        "default_variable_weight": 0
+    }
+]

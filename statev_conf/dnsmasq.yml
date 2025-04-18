@@ -1,0 +1,65 @@
+Type:
+  - name: dns_header::hb3
+    special_flag: 1
+    val_name:
+      - HB3_QR,128
+      - HB3_AA,4
+      - HB3_TC,2
+      - HB3_RD,1
+  - name: addrlist::flags
+    special_flag: 1
+    val_name:
+      - ADDRLIST_LITERAL,1
+      - ADDRLIST_IPV6,2
+      - ADDRLIST_REVONLY,4
+  - name: dhcp_vendor::match_type
+    special_flag: 0
+    val_name:
+      - MATCH_VENDOR,1
+      - MATCH_USER,2
+      - MATCH_CIRCUIT,3
+      - MATCH_REMOTE,4
+      - MATCH_SUBSCRIBER,5
+State:
+  - name: dhcp_opt::flags
+    special_flag: 1
+    val_name:
+      - DHOPT_ADDR,1
+      - DHOPT_STRING,2
+      - DHOPT_ENCAPSULATE,4
+      - DHOPT_ENCAP_MATCH,8
+      - DHOPT_FORCE,16
+      - DHOPT_BANK,32
+      - DHOPT_ENCAP_DONE,64
+      - DHOPT_MATCH,128
+      - DHOPT_VENDOR,256
+      - DHOPT_HEX,512
+      - DHOPT_VENDOR_MATCH,1024
+      - DHOPT_RFC3925,2048
+      - DHOPT_TAGOK,4096
+      - DHOPT_ADDR6,8192
+  - name: dhcp_lease::flags
+    special_flag: 1
+    val_name:
+      - LEASE_NEW,1
+      - LEASE_CHANGED,2
+      - LEASE_AUX_CHANGED,4
+      - LEASE_AUTH_NAME,8
+      - LEASE_USED,16
+      - LEASE_NA,32
+      - LEASE_TA,64
+      - LEASE_HAVE_HWADDR,128
+  - name: frec::flags
+    special_flag: 1
+    val_name: 
+      - FREC_NOREBIND,1
+      - FREC_CHECKING_DISABLED,2
+      - FREC_HAS_SUBNET,4
+      - FREC_DNSKEY_QUERY,8
+      - FREC_DS_QUERY,16
+      - FREC_AD_QUESTION,32
+      - FREC_DO_QUESTION,64
+      - FREC_ADDED_PHEADER,128
+      - FREC_CHECK_NOSIGN,256
+Unknown:
+  -

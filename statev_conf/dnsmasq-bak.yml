@@ -1,0 +1,7 @@
+Type:
+  - dns_header::hb4
+  - txt_record::class
+State:
+  -
+Unknown:
+  -

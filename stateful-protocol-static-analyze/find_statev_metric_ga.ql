@@ -28,7 +28,7 @@ class GlobalAssign instanceof VariableAccess {
   string getName() { result = super.getTarget().getQualifiedName() }
 }
 
-//统计一个stmt中全局变量赋值
+
 string stmtGlobalAssignCount(Stmt stmt) {
   result =
     concat(GlobalAssign ga |
@@ -38,13 +38,13 @@ string stmtGlobalAssignCount(Stmt stmt) {
     )
 }
 
-//统计一个函数中全局变量赋值
+
 string functionGlobalAssignCount(Function f) {
   result =
     concat(GlobalAssign ga | ga.(VariableAccess).getEnclosingFunction() = f | ga.getName(), " , ")
 }
 
-//统计stmt以及其调用的函数中全局变量赋值
+
 string stmtDoGolobalAssignCount(Stmt stmt) {
   result =
     stmtGlobalAssignCount(stmt) + " , " +
@@ -60,7 +60,7 @@ string stmtDoGolobalAssignCount(Stmt stmt) {
       )
 }
 
-//统计函数以及其调用的函数中全局变量赋值
+
 language[monotonicAggregates]
 string functionCountainGlobalAssignCount(Function f) {
   if exists(int c | c = f.getMetrics().getNumberOfLinesOfCode())
@@ -80,7 +80,7 @@ string functionCountainGlobalAssignCount(Function f) {
   else result = ""
 }
 
-//获取IF中True分支的全局变量赋值
+
 string ifTrueGlobalAssignCount(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof IfStmt and
   exists(Stmt stmt |
@@ -90,7 +90,7 @@ string ifTrueGlobalAssignCount(VariableAccess ac, Expr scope) {
   scope = ac.getEnclosingElement().(ComparisonOperation).getRightOperand()
 }
 
-//获取IF中False分支的全局变量赋值
+
 string ifFalseGlobalAssignCount(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof IfStmt and
   exists(Stmt stmt |
@@ -100,7 +100,7 @@ string ifFalseGlobalAssignCount(VariableAccess ac, Expr scope) {
   scope = ac.getEnclosingElement().(ComparisonOperation).getRightOperand()
 }
 
-//获取Switch中的全局变量赋值
+
 string switchGlobalAssignCount(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof SwitchStmt and
   exists(SwitchCase case |

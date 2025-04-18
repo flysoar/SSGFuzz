@@ -1,0 +1,143 @@
+Type:
+  - name: sshkey::type
+    special_flag: 0
+    val_name:
+      - KEY_RSA1,0
+      - KEY_RSA,1
+      - KEY_DSA,2
+      - KEY_ECDSA,3
+      - KEY_ED25519,4
+      - KEY_RSA_CERT,5
+      - KEY_DSA_CERT,6
+      - KEY_ECDSA_CERT,7
+      - KEY_ED25519_CERT,8
+  - name: Channel::type
+    special_flag: 0
+    val_name:
+      - SSH_CHANNEL_X11_LISTENER,1
+      - SSH_CHANNEL_PORT_LISTENER,2
+      - SSH_CHANNEL_OPENING,3
+      - SSH_CHANNEL_OPEN,4
+      - SSH_CHANNEL_CLOSED,5
+      - SSH_CHANNEL_AUTH_SOCKET,6
+      - SSH_CHANNEL_X11_OPEN,7
+      - SSH_CHANNEL_INPUT_DRAINING,8
+      - SSH_CHANNEL_OUTPUT_DRAINING,9
+      - SSH_CHANNEL_LARVAL,10
+      - SSH_CHANNEL_RPORT_LISTENER,11
+      - SSH_CHANNEL_CONNECTING,12
+      - SSH_CHANNEL_DYNAMIC,13
+      - SSH_CHANNEL_ZOMBIE,14
+      - SSH_CHANNEL_MUX_LISTENER,15
+      - SSH_CHANNEL_MUX_CLIENT,16
+      - SSH_CHANNEL_ABANDONED,17
+      - SSH_CHANNEL_UNIX_LISTENER,18
+      - SSH_CHANNEL_RUNIX_LISTENER,19
+      - SSH_CHANNEL_MUX_PROXY,20
+  - name: kex::kex_type
+    special_flag: 0
+    val_name:
+      - KEX_DH_GRP1_SHA1,0
+      - KEX_DH_GRP14_SHA1,1
+      - KEX_DH_GRP14_SHA256,2
+      - KEX_DH_GRP16_SHA512,3
+      - KEX_DH_GRP18_SHA512,4
+      - KEX_DH_GEX_SHA1,5
+      - KEX_DH_GEX_SHA256,6
+      - KEX_ECDH_SHA2,7
+      - KEX_C25519_SHA256,8
+  - name: sshcomp::type
+    special_flag: 0
+    val_name:
+      - COMP_NONE,0
+      - COMP_ZLIB,1
+      - COMP_DELAYED,2
+  - name: Attrib::flags
+    special_flag: 0
+    val_name:
+      - SSH2_FXP_INIT,1
+      - SSH2_FXP_OPEN,3
+      - SSH2_FXP_CLOSE,4
+      - SSH2_FXP_READ,5
+      - SSH2_FXP_WRITE,6
+      - SSH2_FXP_LSTAT,7
+      - SSH2_FXP_STAT_VERSION_0,7
+      - SSH2_FXP_FSTAT,8
+      - SSH2_FXP_SETSTAT,9
+      - SSH2_FXP_FSETSTAT,10
+      - SSH2_FXP_OPENDIR,11
+      - SSH2_FXP_READDIR,12
+      - SSH2_FXP_REMOVE,13
+      - SSH2_FXP_MKDIR,14
+      - SSH2_FXP_RMDIR,15
+      - SSH2_FXP_REALPATH,16
+      - SSH2_FXP_STAT,17
+      - SSH2_FXP_RENAME,18
+      - SSH2_FXP_READLINK,19
+      - SSH2_FXP_SYMLINK,20
+State:
+  - name: session_state::compression_in_started
+    special_flag: 0
+    val_name:
+      -
+  - name: session_state::compression_out_started
+    special_flag: 0
+    val_name:
+      - 
+  - name: use_privsep
+    special_flag: 0
+    val_name:
+      - 
+Unknown:
+  - name: ssh::state
+    special_flag: 0
+    val_name:
+      - 
+  - name: (unnamed class_struct_union)::add_keys_to_agent
+    special_flag: 0
+    val_name:
+      - 
+  - name: (unnamed class_struct_union)::canonicalize_hostname
+    special_flag: 0
+    val_name:
+      - 
+  - name: (unnamed class_struct_union)::cipher
+    special_flag: 0
+    val_name:
+      - 
+  - name: (unnamed class_struct_union)::control_master
+    special_flag: 0
+    val_name:
+      - 
+  - name: (unnamed class_struct_union)::escape_char
+    special_flag: 0
+    val_name:
+      - 
+  - name: (unnamed class_struct_union)::log_level
+    special_flag: 0
+    val_name:
+      - 
+  - name: (unnamed class_struct_union)::max_startups_rate
+    special_flag: 0
+    val_name:
+      - 
+  - name: (unnamed class_struct_union)::num_auth_methods
+    special_flag: 0
+    val_name:
+      - 
+  - name: (unnamed class_struct_union)::permit_root_login
+    special_flag: 0
+    val_name:
+      - 
+  - name: (unnamed class_struct_union)::request_tty
+    special_flag: 0
+    val_name:
+      - 
+  - name: (unnamed class_struct_union)::strict_host_key_checking
+    special_flag: 0
+    val_name:
+      - 
+  - name: (unnamed class_struct_union)::tun_remote
+    special_flag: 0
+    val_name:
+      - 

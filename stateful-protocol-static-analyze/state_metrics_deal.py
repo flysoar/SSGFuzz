@@ -23,17 +23,17 @@ class ConstantStateValue(StateValue):
         self.same_state_transition_list = {}
         self.other_state_transition_list = {}
 
-        self.code_of_line = 0 #代码行数
-        self.cycle_complexity = 0 #圈复杂度
-        self.halstead_n1 = 0 #Halstead n1
-        self.halstead_n2 = 0 #Halstead n2
-        self.halstead_N1 = 0 #Halstead N1
-        self.halstead_N2 = 0 #Halstead N2
-        self.maintainnbility_index = 1 #可维护性指数
-        self.global_access_list = [] #全局变量访问类型
-        self.global_access_num = 0 #全局变量访问次数
-        self.global_assign_list = [] #全局变量赋值类型
-        self.global_assign_num = 0 #全局变量赋值次数
+        self.code_of_line = 0
+        self.cycle_complexity = 0 
+        self.halstead_n1 = 0
+        self.halstead_n2 = 0 
+        self.halstead_N1 = 0
+        self.halstead_N2 = 0
+        self.maintainnbility_index = 1 
+        self.global_access_list = [] 
+        self.global_access_num = 0
+        self.global_assign_list = [] 
+        self.global_assign_num = 0 
 
         self.metric_to = 1
         self.metric_cc = 1
@@ -226,7 +226,6 @@ class StateMetricCollection:
                 next_state_machine = line.split(",")[1].strip()
                 next_state_value = line.split(",")[3].strip()
 
-                # Now, skip the switch case
                 if next_state_value == 'switch':
                     continue
 

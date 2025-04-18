@@ -1,0 +1,181 @@
+Type:
+  - name: router_instance::self_code
+    special_flag: 0
+    val_name:
+      -
+  - name: acl_where
+    special_flag: 0
+    val_name:
+      - ACL_WHERE_RCPT,0
+      - ACL_WHERE_MAIL,1
+      - ACL_WHERE_PREDATA,2
+      - ACL_WHERE_MIME,3
+      - ACL_WHERE_DKIM,4
+      - ACL_WHERE_DATA,5
+      - ACL_WHERE_PRDR,6
+      - ACL_WHERE_NOTSMTP,7
+      - ACL_WHERE_AUTH,8
+      - ACL_WHERE_CONNECT,9
+      - ACL_WHERE_ETRN,10
+      - ACL_WHERE_EXPN,11
+      - ACL_WHERE_HELO,12
+      - ACL_WHERE_MAILAUTH,13
+      - ACL_WHERE_NOTSMTP_START,14
+      - ACL_WHERE_NOTQUIT,15
+      - ACL_WHERE_QUIT,16
+      - ACL_WHERE_STARTTLS,17
+      - ACL_WHERE_VRFY,18
+      - ACL_WHERE_DELIVERY,19
+      - ACL_WHERE_UNKNOWN,20
+  - name: header_line::type
+    special_flag: 0
+    val_name:
+      - htype_other,32
+      - htype_from,70
+      - htype_to,84
+      - htype_cc,67
+      - htype_bcc,66
+      - htype_id,73
+      - htype_reply_to,82
+      - htype_received,80
+      - htype_sender,83
+      - htype_old,42
+      - htype_date,100
+      - htype_return_path,112
+      - htype_delivery_date,120
+      - htype_envelope_to,101
+      - htype_subject,115
+      - htype_add_top,97
+      - htype_add_rec,114
+      - htype_add_bot,122
+      - htype_add_rfc,102
+  - name: filter_cmd::command
+    special_flag: 0
+    val_name:
+      - add_command,0
+      - defer_command,1
+      - deliver_command,2
+      - elif_command,3
+      - else_command,4
+      - endif_command,5
+      - finish_command,6
+      - fail_command,7
+      - freeze_command,8
+      - headers_command,9
+      - if_command,10
+      - logfile_command,11
+      - logwrite_command,12
+      - mail_command,13
+      - noerror_command,14
+      - pipe_command,15
+      - save_command,16
+      - seen_command,17
+      - testprint_command,18
+      - unseen_command,19
+      - vacation_command,20
+  - name: condition_block::type
+    special_flag: 0
+    val_name:
+      - cond_BEGINS,0
+      - cond_BEGINS,1
+      - cond_CONTAINS,2
+      - cond_CONTAINS,3
+      - cond_ENDS,4
+      - cond_ENDS,5
+      - cond_IS,6
+      - cond_MATCHES,7
+      - cond_MATCHES,8
+      - cond_above,9
+      - cond_begins,10
+      - cond_begins,11
+      - cond_below,12
+      - cond_contains,13
+      - cond_contains,14
+      - cond_ends,15
+      - cond_ends,16
+      - cond_is,17
+      - cond_matches,18
+      - cond_matches,19
+State:
+  - name: address_item::transport_return
+    special_flag: 0
+    val_name:
+      - OK,0
+      - DEFER,1
+      - FAIL,2
+      - ERROR,3
+      - FAIL_FORCED,4
+      - DECLINE,5
+      - PASS,6
+      - DISCARD,7
+      - SKIP,8
+      - REROUTED,9
+      - PANIC,10
+      - BAD64,11
+      - UNEXPECTED,12
+      - CANCELLED,13
+      - FAIL_SEND,14
+      - FAIL_DROP,15
+  - name: address_item::flags
+    special_flag: 1
+    val_name:
+      - af_allow_file,1
+      - af_allow_pipe,2
+      - af_allow_reply,4
+      - af_dr_retry_exists,8
+      - af_expand_pipe,16
+      - af_file,32
+      - af_gid_set,64
+      - af_home_expanded,128
+      - af_ignore_error,256
+      - af_initgroups,512
+      - af_local_host_removed,1024
+      - af_lt_retry_exists,2048
+      - af_pfr,4096
+      - af_retry_skipped,8192
+      - af_retry_timedout,16384
+      - af_uid_set,32768
+      - af_hide_child,65536
+      - af_sverify_told,131072
+      - af_verify_pmfail,262144
+      - af_verify_nsfail,524288
+      - af_homonym,1048576
+      - af_verify_routed,2097152
+      - af_verify_callout,4194304
+      - af_include_affixes,8388608
+      - af_cert_verified,16777216
+      - af_pass_message,33554432
+      - af_bad_reply,67108864
+      - af_chunking_used,268435456
+      - af_force_command,536870912
+  - name: retry_item::flags
+    special_flag: 1
+    val_name:
+      - rf_delete,1
+      - rf_host,2
+      - rf_message,4
+Unknown:
+  - name: chunking_state
+    special_flag: 0
+    val_name:
+      -
+  - name: debug_selector
+    special_flag: 0
+    val_name:
+      -
+  - name: router_instance::log_as_local
+    special_flag: 0
+    val_name:
+      -
+  - name: sender_data
+    special_flag: 0
+    val_name:
+      -
+  - name: big_buffer
+    special_flag: 0
+    val_name:
+      -
+  - name: namedlist_block::string
+    special_flag: 0
+    val_name:
+      -

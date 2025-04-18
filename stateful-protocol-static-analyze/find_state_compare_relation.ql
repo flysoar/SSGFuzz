@@ -19,11 +19,9 @@ import StateValRelation
 
 class StateVariableCheckConstEqual instanceof StateVariableCheckConst {
   StateVariableCheckConstEqual() {
-    //在switch语句或者if语句中被使用
     this.(VariableAccess).getEnclosingStmt() instanceof SwitchStmt
     or
     this.(VariableAccess).getEnclosingStmt() instanceof IfStmt and
-    //在if语句中使用时，保证左边是状态变量，右边是常量
     this.(VariableAccess).getParent().(EQExpr).getRightOperand().isConstant()
   }
 
@@ -47,7 +45,6 @@ predicate functionContain(VariableAccess sc, Function f) {
   )
 }
 
-//判定if的true分支中是否存在对状态变量的赋值，以及调用的函数中是否存在对状态变量的赋值
 predicate ifTrueExistStateCompare(VariableAccess ac, VariableAccess sc, Stmt stmt) {
   ac.getEnclosingStmt() instanceof IfStmt and
   stmt = ac.getEnclosingStmt().(IfStmt).getThen() and
@@ -61,7 +58,7 @@ predicate ifTrueExistStateCompare(VariableAccess ac, VariableAccess sc, Stmt stm
   )
 }
 
-//判定if的false分支中是否存在对状态变量的赋值，以及调用的函数中是否存在对状态变量的赋值
+
 predicate ifFalseExistStateCompare(VariableAccess ac, VariableAccess sc, Stmt stmt) {
   ac.getEnclosingStmt() instanceof IfStmt and
   stmt = ac.getEnclosingStmt().(IfStmt).getElse() and
@@ -75,7 +72,7 @@ predicate ifFalseExistStateCompare(VariableAccess ac, VariableAccess sc, Stmt st
   )
 }
 
-//判定switch中是否存在对状态变量的赋值，以及调用的函数中是否存在对状态变量的赋值
+
 predicate switchExistStateCompare(VariableAccess ac, VariableAccess sc, Expr scope, Stmt stmt) {
   ac.getEnclosingStmt() instanceof SwitchStmt and
   exists(SwitchCase case |

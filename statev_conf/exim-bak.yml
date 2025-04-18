@@ -1,0 +1,11 @@
+Type:
+  - router_instance::self_code
+State:
+  - address_item::transport_return
+Unknown:
+  - chunking_state
+  - debug_selector
+  - router_instance::log_as_local
+  - sender_data
+  - big_buffer
+  - namedlist_block::string

@@ -1,0 +1,1736 @@
+[
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 1,
+                "state_id": 1,
+                "name": "Q_ITEMS",
+                "code_weight": 1610,
+                "variable_weight": 43
+            },
+            {
+                "next_statevalue": [
+                    {
+                        "name": "query_params::results",
+                        "value": 1,
+                        "state_id": 5
+                    }
+                ],
+                "compare_relation_statevalue": [],
+                "value": 9,
+                "state_id": 1,
+                "name": "Q_COUNT_ITEMS",
+                "code_weight": 155,
+                "variable_weight": 5
+            },
+            {
+                "next_statevalue": [
+                    {
+                        "name": "query_params::idx_type",
+                        "value": 3,
+                        "state_id": 7
+                    }
+                ],
+                "compare_relation_statevalue": [
+                    {
+                        "name": "query_params::sort",
+                        "value": 0,
+                        "state_id": 3
+                    },
+                    {
+                        "name": "playlist_info::type",
+                        "value": 0,
+                        "state_id": 6
+                    },
+                    {
+                        "name": "query_params::idx_type",
+                        "value": 0,
+                        "state_id": 7
+                    },
+                    {
+                        "name": "query_params::idx_type",
+                        "value": 3,
+                        "state_id": 7
+                    },
+                    {
+                        "name": "playlist_info::type",
+                        "value": 2,
+                        "state_id": 6
+                    }
+                ],
+                "value": 4,
+                "state_id": 1,
+                "name": "Q_PLITEMS",
+                "code_weight": 6934,
+                "variable_weight": 202
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 2,
+                "state_id": 1,
+                "name": "Q_PL",
+                "code_weight": 1610,
+                "variable_weight": 43
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 3,
+                "state_id": 1,
+                "name": "Q_FIND_PL",
+                "code_weight": 1765,
+                "variable_weight": 48
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 5,
+                "state_id": 1,
+                "name": "Q_GROUP_ALBUMS",
+                "code_weight": 1628,
+                "variable_weight": 43
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 6,
+                "state_id": 1,
+                "name": "Q_GROUP_ARTISTS",
+                "code_weight": 1610,
+                "variable_weight": 43
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 7,
+                "state_id": 1,
+                "name": "Q_GROUP_ITEMS",
+                "code_weight": 3216,
+                "variable_weight": 85
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 8,
+                "state_id": 1,
+                "name": "Q_GROUP_DIRS",
+                "code_weight": 3220,
+                "variable_weight": 85
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 32769,
+                "state_id": 1,
+                "name": "Q_BROWSE_ARTISTS",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 32770,
+                "state_id": 1,
+                "name": "Q_BROWSE_ALBUMS",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 32771,
+                "state_id": 1,
+                "name": "Q_BROWSE_GENRES",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 32772,
+                "state_id": 1,
+                "name": "Q_BROWSE_COMPOSERS",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 32773,
+                "state_id": 1,
+                "name": "Q_BROWSE_YEARS",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 32774,
+                "state_id": 1,
+                "name": "Q_BROWSE_DISCS",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 32775,
+                "state_id": 1,
+                "name": "Q_BROWSE_TRACKS",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 32776,
+                "state_id": 1,
+                "name": "Q_BROWSE_VPATH",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 32777,
+                "state_id": 1,
+                "name": "Q_BROWSE_PATH",
+                "code_weight": 0,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "query_params::type",
+        "state_id": 1,
+        "state_type": 2,
+        "code_weight": 881,
+        "variable_weight": 13,
+        "default_code_weight": 155,
+        "default_variable_weight": 5,
+        "special_flag": 0,
+        "texted_flag": 1
+    },
+    {
+        "state_list": [],
+        "flag_list": [],
+        "name": "http_client_ctx::response_code",
+        "state_id": 2,
+        "state_type": 1,
+        "code_weight": 296,
+        "variable_weight": 2,
+        "default_code_weight": 592,
+        "default_variable_weight": 16,
+        "special_flag": 0,
+        "texted_flag": 1
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [
+                    {
+                        "name": "query_params::sort",
+                        "value": 2,
+                        "state_id": 3
+                    }
+                ],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 3,
+                "name": "S_NONE",
+                "code_weight": 4,
+                "variable_weight": 2
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 2,
+                "state_id": 3,
+                "name": "S_ALBUM",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 12,
+                "state_id": 3,
+                "name": "S_SHUFFLE_POS",
+                "code_weight": 162,
+                "variable_weight": 5
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 1,
+                "state_id": 3,
+                "name": "S_NAME",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 3,
+                "state_id": 3,
+                "name": "S_ARTIST",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 4,
+                "state_id": 3,
+                "name": "S_PLAYLIST",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 5,
+                "state_id": 3,
+                "name": "S_YEAR",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 6,
+                "state_id": 3,
+                "name": "S_GENRE",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 7,
+                "state_id": 3,
+                "name": "S_COMPOSER",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 8,
+                "state_id": 3,
+                "name": "S_DISC",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 9,
+                "state_id": 3,
+                "name": "S_TRACK",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 10,
+                "state_id": 3,
+                "name": "S_VPATH",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 11,
+                "state_id": 3,
+                "name": "S_POS",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 13,
+                "state_id": 3,
+                "name": "S_DATE_RELEASED",
+                "code_weight": 0,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "query_params::sort",
+        "state_id": 3,
+        "state_type": 1,
+        "code_weight": 38,
+        "variable_weight": 5,
+        "default_code_weight": 162,
+        "default_variable_weight": 5,
+        "special_flag": 0,
+        "texted_flag": 1
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [
+                    {
+                        "name": "media_file_info::data_kind",
+                        "value": 1,
+                        "state_id": 9
+                    },
+                    {
+                        "name": "media_file_info::media_kind",
+                        "value": 10,
+                        "state_id": 8
+                    }
+                ],
+                "value": 1,
+                "state_id": 4,
+                "name": "",
+                "code_weight": 5641,
+                "variable_weight": 231
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 3,
+                "state_id": 4,
+                "name": "",
+                "code_weight": 163,
+                "variable_weight": 4
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 4,
+                "name": "",
+                "code_weight": 4,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "db_queue_item::data_kind",
+        "state_id": 4,
+        "state_type": 2,
+        "code_weight": 852,
+        "variable_weight": 54,
+        "default_code_weight": 77,
+        "default_variable_weight": 4,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": -1,
+                "state_id": 5,
+                "name": "",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 1,
+                "state_id": 5,
+                "name": "",
+                "code_weight": 4,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 5,
+                "name": "",
+                "code_weight": 1461,
+                "variable_weight": 39
+            }
+        ],
+        "flag_list": [],
+        "name": "query_params::results",
+        "state_id": 5,
+        "state_type": 1,
+        "code_weight": 293,
+        "variable_weight": 4,
+        "default_code_weight": 732,
+        "default_variable_weight": 39,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [
+                    {
+                        "name": "query_params::idx_type",
+                        "value": 3,
+                        "state_id": 7
+                    }
+                ],
+                "compare_relation_statevalue": [
+                    {
+                        "name": "query_params::sort",
+                        "value": 0,
+                        "state_id": 3
+                    },
+                    {
+                        "name": "query_params::idx_type",
+                        "value": 0,
+                        "state_id": 7
+                    },
+                    {
+                        "name": "query_params::idx_type",
+                        "value": 3,
+                        "state_id": 7
+                    }
+                ],
+                "value": 2,
+                "state_id": 6,
+                "name": "",
+                "code_weight": 3472,
+                "variable_weight": 113
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 1,
+                "state_id": 6,
+                "name": "",
+                "code_weight": 1610,
+                "variable_weight": 43
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 6,
+                "name": "",
+                "code_weight": 1455,
+                "variable_weight": 38
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 4,
+                "state_id": 6,
+                "name": "",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 3,
+                "state_id": 6,
+                "name": "",
+                "code_weight": 0,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "playlist_info::type",
+        "state_id": 6,
+        "state_type": 2,
+        "code_weight": 1144,
+        "variable_weight": 13,
+        "default_code_weight": 1532,
+        "default_variable_weight": 40,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 3,
+                "state_id": 7,
+                "name": "I_SUB",
+                "code_weight": 7,
+                "variable_weight": 3
+            },
+            {
+                "next_statevalue": [
+                    {
+                        "name": "query_params::idx_type",
+                        "value": 3,
+                        "state_id": 7
+                    }
+                ],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 7,
+                "name": "I_NONE",
+                "code_weight": 6,
+                "variable_weight": 4
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 1,
+                "state_id": 7,
+                "name": "I_FIRST",
+                "code_weight": 2,
+                "variable_weight": 1
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 2,
+                "state_id": 7,
+                "name": "I_LAST",
+                "code_weight": 2,
+                "variable_weight": 1
+            }
+        ],
+        "flag_list": [],
+        "name": "query_params::idx_type",
+        "state_id": 7,
+        "state_type": 2,
+        "code_weight": 52,
+        "variable_weight": 6,
+        "default_code_weight": 6,
+        "default_variable_weight": 3,
+        "special_flag": 0,
+        "texted_flag": 1
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 64,
+                "state_id": 8,
+                "name": "",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [
+                    {
+                        "name": "media_file_info::media_kind",
+                        "value": 64,
+                        "state_id": 8
+                    }
+                ],
+                "compare_relation_statevalue": [],
+                "value": 10,
+                "state_id": 8,
+                "name": "",
+                "code_weight": 2,
+                "variable_weight": 1
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 2,
+                "state_id": 8,
+                "name": "",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 4,
+                "state_id": 8,
+                "name": "",
+                "code_weight": 3,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "media_file_info::media_kind",
+        "state_id": 8,
+        "state_type": 2,
+        "code_weight": 1,
+        "variable_weight": 1,
+        "default_code_weight": 3,
+        "default_variable_weight": 1,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 1,
+                "state_id": 9,
+                "name": "",
+                "code_weight": 1528,
+                "variable_weight": 56
+            }
+        ],
+        "flag_list": [],
+        "name": "media_file_info::data_kind",
+        "state_id": 9,
+        "state_type": 2,
+        "code_weight": 838,
+        "variable_weight": 26,
+        "default_code_weight": 838,
+        "default_variable_weight": 30,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 1,
+                "state_id": 10,
+                "name": "EVRTSP_REQ_OPTIONS",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 8,
+                "state_id": 10,
+                "name": "EVRTSP_REQ_TEARDOWN",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 10,
+                "name": "EVRTSP_REQ_ANNOUNCE",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 2,
+                "state_id": 10,
+                "name": "EVRTSP_REQ_SETUP",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 3,
+                "state_id": 10,
+                "name": "EVRTSP_REQ_RECORD",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 4,
+                "state_id": 10,
+                "name": "EVRTSP_REQ_PAUSE",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 5,
+                "state_id": 10,
+                "name": "EVRTSP_REQ_GET_PARAMETER",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 6,
+                "state_id": 10,
+                "name": "EVRTSP_REQ_SET_PARAMETER",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 7,
+                "state_id": 10,
+                "name": "EVRTSP_REQ_FLUSH",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 9,
+                "state_id": 10,
+                "name": "EVRTSP_REQ_POST",
+                "code_weight": 0,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "evrtsp_request::type",
+        "state_id": 10,
+        "state_type": 2,
+        "code_weight": 0,
+        "variable_weight": 0,
+        "default_code_weight": 0,
+        "default_variable_weight": 0,
+        "special_flag": 0,
+        "texted_flag": 1
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [
+                    {
+                        "name": "evrtsp_connection::state",
+                        "value": 1,
+                        "state_id": 12
+                    },
+                    {
+                        "name": "evrtsp_connection::state",
+                        "value": 2,
+                        "state_id": 12
+                    }
+                ],
+                "value": 1,
+                "state_id": 11,
+                "name": "",
+                "code_weight": 851,
+                "variable_weight": 64
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 11,
+                "name": "",
+                "code_weight": 0,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "evrtsp_request::kind",
+        "state_id": 11,
+        "state_type": 2,
+        "code_weight": 425,
+        "variable_weight": 21,
+        "default_code_weight": 851,
+        "default_variable_weight": 64,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 1,
+                "state_id": 12,
+                "name": "EVCON_CONNECTING",
+                "code_weight": 2,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [
+                    {
+                        "name": "evrtsp_connection::state",
+                        "value": 1,
+                        "state_id": 12
+                    }
+                ],
+                "compare_relation_statevalue": [
+                    {
+                        "name": "evrtsp_connection::state",
+                        "value": 1,
+                        "state_id": 12
+                    },
+                    {
+                        "name": "evrtsp_connection::state",
+                        "value": 2,
+                        "state_id": 12
+                    }
+                ],
+                "value": 3,
+                "state_id": 12,
+                "name": "EVCON_READING_FIRSTLINE",
+                "code_weight": 1606,
+                "variable_weight": 117
+            },
+            {
+                "next_statevalue": [
+                    {
+                        "name": "evrtsp_connection::state",
+                        "value": 1,
+                        "state_id": 12
+                    }
+                ],
+                "compare_relation_statevalue": [
+                    {
+                        "name": "evrtsp_connection::state",
+                        "value": 1,
+                        "state_id": 12
+                    },
+                    {
+                        "name": "evrtsp_connection::state",
+                        "value": 2,
+                        "state_id": 12
+                    }
+                ],
+                "value": 4,
+                "state_id": 12,
+                "name": "EVCON_READING_HEADERS",
+                "code_weight": 1230,
+                "variable_weight": 87
+            },
+            {
+                "next_statevalue": [
+                    {
+                        "name": "evrtsp_connection::state",
+                        "value": 1,
+                        "state_id": 12
+                    }
+                ],
+                "compare_relation_statevalue": [
+                    {
+                        "name": "evrtsp_connection::state",
+                        "value": 1,
+                        "state_id": 12
+                    },
+                    {
+                        "name": "evrtsp_connection::state",
+                        "value": 2,
+                        "state_id": 12
+                    }
+                ],
+                "value": 5,
+                "state_id": 12,
+                "name": "EVCON_READING_BODY",
+                "code_weight": 476,
+                "variable_weight": 35
+            },
+            {
+                "next_statevalue": [
+                    {
+                        "name": "evrtsp_connection::state",
+                        "value": 1,
+                        "state_id": 12
+                    }
+                ],
+                "compare_relation_statevalue": [
+                    {
+                        "name": "evrtsp_connection::state",
+                        "value": 1,
+                        "state_id": 12
+                    },
+                    {
+                        "name": "evrtsp_connection::state",
+                        "value": 2,
+                        "state_id": 12
+                    }
+                ],
+                "value": 6,
+                "state_id": 12,
+                "name": "EVCON_READING_TRAILER",
+                "code_weight": 865,
+                "variable_weight": 60
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 12,
+                "name": "EVCON_DISCONNECTED",
+                "code_weight": 1,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 7,
+                "state_id": 12,
+                "name": "EVCON_WRITING",
+                "code_weight": 1,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 2,
+                "state_id": 12,
+                "name": "EVCON_IDLE",
+                "code_weight": 1,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "evrtsp_connection::state",
+        "state_id": 12,
+        "state_type": 1,
+        "code_weight": 380,
+        "variable_weight": 21,
+        "default_code_weight": 1,
+        "default_variable_weight": 73,
+        "special_flag": 0,
+        "texted_flag": 1
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [
+                    {
+                        "name": "settings_ctx::audio_codec",
+                        "value": 65536,
+                        "state_id": 25
+                    }
+                ],
+                "compare_relation_statevalue": [],
+                "value": 16,
+                "state_id": 13,
+                "name": "",
+                "code_weight": 593,
+                "variable_weight": 64
+            },
+            {
+                "next_statevalue": [
+                    {
+                        "name": "settings_ctx::audio_codec",
+                        "value": 65536,
+                        "state_id": 25
+                    }
+                ],
+                "compare_relation_statevalue": [],
+                "value": 24,
+                "state_id": 13,
+                "name": "",
+                "code_weight": 593,
+                "variable_weight": 64
+            },
+            {
+                "next_statevalue": [
+                    {
+                        "name": "settings_ctx::audio_codec",
+                        "value": 65536,
+                        "state_id": 25
+                    }
+                ],
+                "compare_relation_statevalue": [],
+                "value": 32,
+                "state_id": 13,
+                "name": "",
+                "code_weight": 593,
+                "variable_weight": 64
+            }
+        ],
+        "flag_list": [],
+        "name": "media_quality::bits_per_sample",
+        "state_id": 13,
+        "state_type": 2,
+        "code_weight": 593,
+        "variable_weight": 30,
+        "default_code_weight": 593,
+        "default_variable_weight": 64,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 2,
+                "state_id": 14,
+                "name": "PLAY_STOPPED",
+                "code_weight": 3,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 3,
+                "state_id": 14,
+                "name": "PLAY_PAUSED",
+                "code_weight": 2,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 4,
+                "state_id": 14,
+                "name": "PLAY_PLAYING",
+                "code_weight": 1294,
+                "variable_weight": 42
+            }
+        ],
+        "flag_list": [],
+        "name": "player_status::status",
+        "state_id": 14,
+        "state_type": 1,
+        "code_weight": 2483,
+        "variable_weight": 47,
+        "default_code_weight": 648,
+        "default_variable_weight": 50,
+        "special_flag": 0,
+        "texted_flag": 1
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 8,
+                "state_id": 15,
+                "name": "",
+                "code_weight": 15,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 16,
+                "state_id": 15,
+                "name": "",
+                "code_weight": 1,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "marker::flag",
+        "state_id": 15,
+        "state_type": 1,
+        "code_weight": 8,
+        "variable_weight": 0,
+        "default_code_weight": 8,
+        "default_variable_weight": 0,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": -1,
+                "state_id": 16,
+                "name": "",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": -2,
+                "state_id": 16,
+                "name": "",
+                "code_weight": 1,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "output_device::state",
+        "state_id": 16,
+        "state_type": 1,
+        "code_weight": 0,
+        "variable_weight": 0,
+        "default_code_weight": 1,
+        "default_variable_weight": 0,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [
+                    {
+                        "name": "alsa_session::state",
+                        "value": -1,
+                        "state_id": 17
+                    }
+                ],
+                "compare_relation_statevalue": [],
+                "value": 2,
+                "state_id": 17,
+                "name": "",
+                "code_weight": 1576,
+                "variable_weight": 49
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [
+                    {
+                        "name": "alsa_session::state",
+                        "value": 0,
+                        "state_id": 17
+                    },
+                    {
+                        "name": "alsa_session::state",
+                        "value": -1,
+                        "state_id": 17
+                    }
+                ],
+                "value": -1,
+                "state_id": 17,
+                "name": "",
+                "code_weight": 1740,
+                "variable_weight": 48
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 3,
+                "state_id": 17,
+                "name": "",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 17,
+                "name": "",
+                "code_weight": 787,
+                "variable_weight": 20
+            }
+        ],
+        "flag_list": [],
+        "name": "alsa_session::state",
+        "state_id": 17,
+        "state_type": 1,
+        "code_weight": 1025,
+        "variable_weight": 21,
+        "default_code_weight": 1576,
+        "default_variable_weight": 48,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 18,
+                "name": "",
+                "code_weight": 191,
+                "variable_weight": 8
+            }
+        ],
+        "flag_list": [],
+        "name": "fifo_session::state",
+        "state_id": 18,
+        "state_type": 1,
+        "code_weight": 191,
+        "variable_weight": 6,
+        "default_code_weight": 191,
+        "default_variable_weight": 8,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [
+                    {
+                        "name": "evrtsp_request::kind",
+                        "value": 1,
+                        "state_id": 11
+                    }
+                ],
+                "compare_relation_statevalue": [],
+                "value": 32769,
+                "state_id": 19,
+                "name": "",
+                "code_weight": 1306,
+                "variable_weight": 44
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 32770,
+                "state_id": 19,
+                "name": "",
+                "code_weight": 2,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 19,
+                "name": "",
+                "code_weight": 2,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 16387,
+                "state_id": 19,
+                "name": "",
+                "code_weight": 147,
+                "variable_weight": 4
+            },
+            {
+                "next_statevalue": [
+                    {
+                        "name": "raop_session::state",
+                        "value": 32769,
+                        "state_id": 19
+                    }
+                ],
+                "compare_relation_statevalue": [],
+                "value": 16385,
+                "state_id": 19,
+                "name": "",
+                "code_weight": 676,
+                "variable_weight": 27
+            },
+            {
+                "next_statevalue": [
+                    {
+                        "name": "raop_session::state",
+                        "value": 32769,
+                        "state_id": 19
+                    }
+                ],
+                "compare_relation_statevalue": [],
+                "value": 16386,
+                "state_id": 19,
+                "name": "",
+                "code_weight": 531,
+                "variable_weight": 23
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 8193,
+                "state_id": 19,
+                "name": "",
+                "code_weight": 2,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "raop_session::state",
+        "state_id": 19,
+        "state_type": 1,
+        "code_weight": 431,
+        "variable_weight": 49,
+        "default_code_weight": 147,
+        "default_variable_weight": 23,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 20,
+                "name": "RAOP_DEV_APEX1_80211G",
+                "code_weight": 3,
+                "variable_weight": 2
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 1,
+                "state_id": 20,
+                "name": "RAOP_DEV_APEX2_80211N",
+                "code_weight": 3,
+                "variable_weight": 2
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 2,
+                "state_id": 20,
+                "name": "RAOP_DEV_APEX3_80211N",
+                "code_weight": 3,
+                "variable_weight": 2
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 3,
+                "state_id": 20,
+                "name": "RAOP_DEV_APPLETV",
+                "code_weight": 3,
+                "variable_weight": 2
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 4,
+                "state_id": 20,
+                "name": "RAOP_DEV_APPLETV4",
+                "code_weight": 3,
+                "variable_weight": 2
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 5,
+                "state_id": 20,
+                "name": "RAOP_DEV_HOMEPOD",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 6,
+                "state_id": 20,
+                "name": "RAOP_DEV_OTHER",
+                "code_weight": 0,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "raop_extra::devtype",
+        "state_id": 20,
+        "state_type": 2,
+        "code_weight": 2,
+        "variable_weight": 2,
+        "default_code_weight": 3,
+        "default_variable_weight": 2,
+        "special_flag": 0,
+        "texted_flag": 1
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [
+                    {
+                        "name": "evrtsp_request::kind",
+                        "value": 1,
+                        "state_id": 11
+                    }
+                ],
+                "compare_relation_statevalue": [
+                    {
+                        "name": "evrtsp_connection::state",
+                        "value": 1,
+                        "state_id": 12
+                    },
+                    {
+                        "name": "evrtsp_connection::state",
+                        "value": 0,
+                        "state_id": 12
+                    },
+                    {
+                        "name": "evrtsp_connection::state",
+                        "value": 2,
+                        "state_id": 12
+                    }
+                ],
+                "value": 10,
+                "state_id": 21,
+                "name": "",
+                "code_weight": 8110,
+                "variable_weight": 385
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 2,
+                "state_id": 21,
+                "name": "",
+                "code_weight": 0,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "raop_session::family",
+        "state_id": 21,
+        "state_type": 1,
+        "code_weight": 4055,
+        "variable_weight": 87,
+        "default_code_weight": 8110,
+        "default_variable_weight": 385,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [
+                    {
+                        "name": "query_params::sort",
+                        "value": 0,
+                        "state_id": 3
+                    },
+                    {
+                        "name": "query_params::results",
+                        "value": 0,
+                        "state_id": 5
+                    },
+                    {
+                        "name": "playlist_info::type",
+                        "value": 0,
+                        "state_id": 6
+                    },
+                    {
+                        "name": "query_params::idx_type",
+                        "value": 0,
+                        "state_id": 7
+                    },
+                    {
+                        "name": "query_params::idx_type",
+                        "value": 3,
+                        "state_id": 7
+                    },
+                    {
+                        "name": "playlist_info::type",
+                        "value": 2,
+                        "state_id": 6
+                    }
+                ],
+                "value": 2,
+                "state_id": 22,
+                "name": "PLAY_STOPPED",
+                "code_weight": 65045,
+                "variable_weight": 1870
+            },
+            {
+                "next_statevalue": [
+                    {
+                        "name": "output_device::state",
+                        "value": -1,
+                        "state_id": 16
+                    }
+                ],
+                "compare_relation_statevalue": [],
+                "value": 3,
+                "state_id": 22,
+                "name": "PLAY_PAUSED",
+                "code_weight": 28805,
+                "variable_weight": 812
+            },
+            {
+                "next_statevalue": [
+                    {
+                        "name": "player_status::status",
+                        "value": 3,
+                        "state_id": 14
+                    }
+                ],
+                "compare_relation_statevalue": [],
+                "value": 4,
+                "state_id": 22,
+                "name": "PLAY_PLAYING",
+                "code_weight": 466,
+                "variable_weight": 19
+            }
+        ],
+        "flag_list": [],
+        "name": "player_state",
+        "state_id": 22,
+        "state_type": 1,
+        "code_weight": 15720,
+        "variable_weight": 72,
+        "default_code_weight": 466,
+        "default_variable_weight": 812,
+        "special_flag": 0,
+        "texted_flag": 1
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 1,
+                "state_id": 23,
+                "name": "REPEAT_SONG",
+                "code_weight": 4759,
+                "variable_weight": 156
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 2,
+                "state_id": 23,
+                "name": "REPEAT_ALL",
+                "code_weight": 18927,
+                "variable_weight": 566
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 23,
+                "name": "REPEAT_OFF",
+                "code_weight": 0,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "repeat",
+        "state_id": 23,
+        "state_type": 1,
+        "code_weight": 12248,
+        "variable_weight": 41,
+        "default_code_weight": 18927,
+        "default_variable_weight": 566,
+        "special_flag": 0,
+        "texted_flag": 1
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 1,
+                "state_id": 24,
+                "name": "PLAYER_SEEK_POSITION",
+                "code_weight": 1,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 2,
+                "state_id": 24,
+                "name": "PLAYER_SEEK_RELATIVE",
+                "code_weight": 0,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "player_seek_param::mode",
+        "state_id": 24,
+        "state_type": 1,
+        "code_weight": 0,
+        "variable_weight": 0,
+        "default_code_weight": 1,
+        "default_variable_weight": 0,
+        "special_flag": 0,
+        "texted_flag": 1
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 65536,
+                "state_id": 25,
+                "name": "",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 65548,
+                "state_id": 25,
+                "name": "",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 65544,
+                "state_id": 25,
+                "name": "",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 86017,
+                "state_id": 25,
+                "name": "",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 86076,
+                "state_id": 25,
+                "name": "",
+                "code_weight": 0,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "settings_ctx::audio_codec",
+        "state_id": 25,
+        "state_type": 2,
+        "code_weight": 0,
+        "variable_weight": 0,
+        "default_code_weight": 0,
+        "default_variable_weight": 0,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 1,
+                "state_id": 26,
+                "name": "",
+                "code_weight": 11,
+                "variable_weight": 3
+            }
+        ],
+        "flag_list": [],
+        "name": "decode_ctx::data_kind",
+        "state_id": 26,
+        "state_type": 2,
+        "code_weight": 11,
+        "variable_weight": 3,
+        "default_code_weight": 11,
+        "default_variable_weight": 3,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 7,
+                "state_id": 27,
+                "name": "",
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 61,
+                "state_id": 27,
+                "name": "",
+                "code_weight": 0,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "settings_ctx::video_codec",
+        "state_id": 27,
+        "state_type": 2,
+        "code_weight": 0,
+        "variable_weight": 0,
+        "default_code_weight": 0,
+        "default_variable_weight": 0,
+        "special_flag": 0,
+        "texted_flag": 0
+    }
+]

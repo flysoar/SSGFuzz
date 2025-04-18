@@ -1,0 +1,376 @@
+Type:
+  - name: action::type
+    special_flag: 0
+    val_name:
+      - FORWARD_T,1
+      - DROP_T,2
+      - LOG_T,3
+      - ERROR_T,4
+      - ROUTE_T,5
+      - EXEC_T,6
+      - SET_HOST_T,7
+      - SET_HOSTPORT_T,8
+      - SET_USER_T,9
+      - SET_USERPASS_T,10
+      - SET_PORT_T,11
+      - SET_URI_T,12
+      - SET_HOSTPORTTRANS_T,13
+      - SET_HOSTALL_T,14
+      - SET_USERPHONE_T,15
+      - IF_T,16
+      - SWITCH_T,17
+      - BLOCK_T,18
+      - EVAL_T,19
+      - SWITCH_JT_T,20
+      - SWITCH_COND_T,21
+      - MATCH_COND_T,22
+      - WHILE_T,23
+      - MODULE0_T,24
+      - MODULE1_T,25
+      - MODULE2_T,26
+      - MODULE3_T,27
+      - MODULE4_T,28
+      - MODULE5_T,29
+      - MODULE6_T,30
+      - MODULEX_T,31
+      - MODULE1_RVE_T,32
+      - MODULE2_RVE_T,33
+      - MODULE3_RVE_T,34
+      - MODULE4_RVE_T,35
+      - MODULE5_RVE_T,36
+      - MODULE6_RVE_T,37
+      - MODULEX_RVE_T,38
+      - SETFLAG_T,39
+      - RESETFLAG_T,40
+      - ISFLAGSET_T,41
+      - AVPFLAG_OPER_T,42
+      - LEN_GT_T,43
+      - PREFIX_T,44
+      - STRIP_T,45
+      - STRIP_TAIL_T,46
+      - APPEND_BRANCH_T,47
+      - REMOVE_BRANCH_T,48
+      - CLEAR_BRANCHES_T,49
+      - REVERT_URI_T,50
+      - FORWARD_TCP_T,51
+      - FORWARD_UDP_T,52
+      - FORWARD_TLS_T,53
+      - FORWARD_SCTP_T,54
+      - FORCE_RPORT_T,55
+      - ADD_LOCAL_RPORT_T,56
+      - SET_ADV_ADDR_T,57
+      - SET_ADV_PORT_T,58
+      - FORCE_TCP_ALIAS_T,59
+      - LOAD_AVP_T,60
+      - AVP_TO_URI_T,61
+      - FORCE_SEND_SOCKET_T,62
+      - ASSIGN_T,63
+      - ADD_T,64
+      - UDP_MTU_TRY_PROTO_T,65
+      - SET_FWD_NO_CONNECT_T,66
+      - SET_RPL_NO_CONNECT_T,67
+      - SET_FWD_CLOSE_T,68
+      - SET_RPL_CLOSE_T,69
+      - CFG_SELECT_T,70
+      - CFG_RESET_T,71
+
+  - name: sip_uri::type
+    special_flag: 0
+    val_name:
+      - ERROR_URI_T,0
+      - SIP_URI_T,1
+      - SIPS_URI_T,2
+      - TEL_URI_T,3
+      - TELS_URI_T,4
+      - URN_URI_T,5
+  - name: hdr_field::type
+    special_flag: 0
+    val_name:
+      - HDR_OTHER_T,0
+      - HDR_VIA_T,1
+      - HDR_VIA1_T,1
+      - HDR_VIA2_T,2
+      - HDR_TO_T,3
+      - HDR_FROM_T,4
+      - HDR_CSEQ_T,5
+      - HDR_CALLID_T,6
+      - HDR_CONTACT_T,7
+      - HDR_MAXFORWARDS_T,8
+      - HDR_ROUTE_T,9
+      - HDR_RECORDROUTE_T,10
+      - HDR_CONTENTTYPE_T,11
+      - HDR_CONTENTLENGTH_T,12
+      - HDR_AUTHORIZATION_T,13
+      - HDR_EXPIRES_T,14
+      - HDR_MIN_EXPIRES_T,15
+      - HDR_PROXYAUTH_T,16
+      - HDR_SUPPORTED_T,17
+      - HDR_REQUIRE_T,18
+      - HDR_PROXYREQUIRE_T,19
+      - HDR_UNSUPPORTED_T,20
+      - HDR_ALLOW_T,21
+      - HDR_EVENT_T,22
+      - HDR_ACCEPT_T,23
+      - HDR_ACCEPTLANGUAGE_T,24
+      - HDR_ORGANIZATION_T,25
+      - HDR_PRIORITY_T,26
+      - HDR_SUBJECT_T,27
+      - HDR_USERAGENT_T,28
+      - HDR_SERVER_T,29
+      - HDR_CONTENTDISPOSITION_T,30
+      - HDR_DIVERSION_T,31
+      - HDR_RPID_T,32
+      - HDR_REFER_TO_T,33
+      - HDR_SIPIFMATCH_T,34
+      - HDR_SESSIONEXPIRES_T,35
+      - HDR_MIN_SE_T,36
+      - HDR_SUBSCRIPTION_STATE_T,37
+      - HDR_ACCEPTCONTACT_T,38
+      - HDR_ALLOWEVENTS_T,39
+      - HDR_CONTENTENCODING_T,40
+      - HDR_REFERREDBY_T,41
+      - HDR_REJECTCONTACT_T,42
+      - HDR_REQUESTDISPOSITION_T,43
+      - HDR_WWW_AUTHENTICATE_T,44
+      - HDR_PROXY_AUTHENTICATE_T,45
+      - HDR_DATE_T,46
+      - HDR_IDENTITY_T,47
+      - HDR_IDENTITY_INFO_T,48
+      - HDR_RETRY_AFTER_T,49
+      - HDR_PPI_T,50
+      - HDR_PAI_T,51
+      - HDR_PATH_T,52
+      - HDR_PRIVACY_T,53
+      - HDR_REASON_T,54
+      - HDR_CALLINFO_T,55
+  - name: via_param::type
+    special_flag: 0
+    val_name:
+      - PARAM_HIDDEN,230
+      - PARAM_TTL,231
+      - PARAM_BRANCH,232
+      - PARAM_MADDR,233
+      - PARAM_RECEIVED,234
+      - PARAM_RPORT,235
+      - PARAM_I,236
+      - PARAM_ALIAS,237
+      - PARAM_COMP,238
+      - GEN_PARAM,253
+  - name: sel_param::type
+    special_flag: 0
+    val_name:
+      - SEL_PARAM_INT,0
+      - SEL_PARAM_STR,1
+      - SEL_PARAM_DIV,2
+      - SEL_PARAM_PTR,3
+  - name: rdata::type
+    special_flag: 0
+    val_name:
+      - ns_t_a,1
+      - ns_t_ns,2
+      - ns_t_md,3
+      - ns_t_mf,4
+      - ns_t_cname,5
+      - ns_t_soa,6
+      - ns_t_mb,7
+      - ns_t_mg,8
+      - ns_t_mr,9
+      - ns_t_null,10
+      - ns_t_wks,11
+      - ns_t_ptr,12
+      - ns_t_hinfo,13
+      - ns_t_minfo,14
+      - ns_t_mx,15
+      - ns_t_txt,16
+      - ns_t_rp,17
+      - ns_t_afsdb,18
+      - ns_t_x25,19
+      - ns_t_isdn,20
+      - ns_t_rt,21
+      - ns_t_nsap,22
+      - ns_t_nsap_ptr,23
+      - ns_t_sig,24
+      - ns_t_key,25
+      - ns_t_px,26
+      - ns_t_gpos,27
+      - ns_t_aaaa,28
+      - ns_t_loc,29
+      - ns_t_nxt,30
+      - ns_t_eid,31
+      - ns_t_nimloc,32
+      - ns_t_srv,33
+      - ns_t_atma,34
+      - ns_t_naptr,35
+      - ns_t_kx,36
+      - ns_t_cert,37
+      - ns_t_a6,38
+      - ns_t_dname,39
+      - ns_t_sink,40
+      - ns_t_opt,41
+      - ns_t_apl,42
+      - ns_t_tkey,249
+      - ns_t_tsig,250
+      - ns_t_ixfr,251
+      - ns_t_axfr,252
+      - ns_t_mailb,253
+      - ns_t_maila,254
+      - ns_t_any,255
+      - ns_t_zxfr,256
+  - name: to_param::type
+    special_flag: 0
+    val_name:
+      - TAG_PARAM, 400
+      - GENERAL_PARAM,401
+  - name: param::type
+    special_flag: 0
+    val_name:
+      - P_OTHER,0
+      - P_Q,1
+      - P_EXPIRES,2
+      - P_METHODS,3
+      - P_RECEIVED,4
+      - P_FLAGS,5
+      - P_TRANSPORT,6
+      - P_LR,7
+      - P_R2,8
+      - P_MADDR,9
+      - P_TTL,10
+      - P_DSTIP,11
+      - P_DSTPORT,12
+      - P_INSTANCE,13
+      - P_REG_ID,14
+      - P_FTAG,15
+      - P_CALL_ID,16
+      - P_FROM_TAG,17
+      - P_TO_TAG,18
+      - P_ISD,19
+      - P_SLA,20
+      - P_MA,21
+      - P_OB,22
+  - name: _imc_cmd::type
+    special_flag: 0
+    val_name:
+      - IMC_CMDID_CREATE,1
+      - IMC_CMDID_INVITE,2
+      - IMC_CMDID_JOIN,3
+      - IMC_CMDID_LEAVE,4
+      - IMC_CMDID_ACCEPT,5
+      - IMC_CMDID_REJECT,6
+      - IMC_CMDID_REMOVE,7
+      - IMC_CMDID_DESTROY,8
+      - IMC_CMDID_HELP,9
+      - IMC_CMDID_MEMBERS,10
+      - IMC_CMDID_UNKNOWN,11
+      - IMC_CMDID_ADD,12
+      - IMC_CMDID_ROOMS,13
+State:
+  - name: (unnamed class_struct_union)::call_state
+    special_flag: 0
+    val_name:
+      - CLSTA_ENTER,     100
+      - CLSTA_TRYING,    101
+      - CLSTA_PRACKSTRT, 102
+      - CLSTA_PRACKRPLY, 103
+      - CLSTA_INVITED,   104
+      - CLSTA_CANCEL,    105
+      - CLSTA_INQUEUE,   200
+      - CLSTA_REFER,     301
+      - CLSTA_RFRWAIT,   302
+      - CLSTA_BYEOK,     304
+      - CLSTA_BYE,       305
+  - name: (unnamed class_struct_union)::statuscode
+    special_flag: 0
+    val_name:
+      -
+  - name: _sca_appearance::state
+    special_flag: 0
+    val_name:
+      - SCA_APPEARANCE_STATE_IDLE,0
+      - SCA_APPEARANCE_STATE_SEIZED,1
+      - SCA_APPEARANCE_STATE_PROGRESSING,2
+      - SCA_APPEARANCE_STATE_ALERTING,3
+      - SCA_APPEARANCE_STATE_ACTIVE_PENDING,4
+      - SCA_APPEARANCE_STATE_ACTIVE,5
+      - SCA_APPEARANCE_STATE_HELD,6
+      - SCA_APPEARANCE_STATE_HELD_PRIVATE,7
+  - name: _sca_call_info::state
+    special_flag: 0
+    val_name:
+      - SCA_APPEARANCE_STATE_IDLE,0
+      - SCA_APPEARANCE_STATE_SEIZED,1
+      - SCA_APPEARANCE_STATE_PROGRESSING,2
+      - SCA_APPEARANCE_STATE_ALERTING,3
+      - SCA_APPEARANCE_STATE_ACTIVE_PENDING,4
+      - SCA_APPEARANCE_STATE_ACTIVE,5
+      - SCA_APPEARANCE_STATE_HELD,6
+      - SCA_APPEARANCE_STATE_HELD_PRIVATE,7
+  - name: dmq_node::status
+    special_flag: 0
+    val_name:
+      - DMQ_NODE_ACTIVE,2
+      - DMQ_NODE_TIMEOUT,4 
+      - DMQ_NODE_DISABLED,8
+      - DMQ_NODE_PENDING,16
+  - name: lump::flags
+    special_flag: 1
+    val_name:
+    - LUMP_RPL_HDR,     2
+    - LUMP_RPL_BODY,   4
+    - LUMP_RPL_NODUP,  8
+    - LUMP_RPL_NOFREE,  16
+    - LUMP_RPL_SHMEM,  32
+  - name: pcv_status
+    special_flag: 0
+    val_name:
+      - PCV_NONE, 0
+      - PCV_PARSED, 1,
+      - PCV_GENERATED, 2
+  - name: dlg_cell::state
+    special_flag: 0
+    val_name:
+      - DLG_STATE_UNCONFIRMED,1 
+      - DLG_STATE_EARLY,        2 
+      - DLG_STATE_CONFIRMED_NA, 3 
+      - DLG_STATE_CONFIRMED,    4 
+      - DLG_STATE_DELETED,      5 
+Unknown:
+  - name: _cfg_mapping::flag
+    special_flag: 0
+    val_name:
+      - 
+  - name: _dbg_pid::state
+    special_flag: 0
+    val_name:
+      - 
+  - name: _dbt_column::flag
+    special_flag: 0
+    val_name:
+      - 
+  - name: _dbt_table::flag
+    special_flag: 0
+    val_name:
+      -
+  - name: _dlgs_item::state
+    special_flag: 0
+    val_name:
+      -
+  - name: _ds_dest::flags
+    special_flag: 0
+    val_name:
+      -
+  - name: yy_buffer_state::yy_buffer_status
+    special_flag: 0
+    val_name:
+      -
+  - name: rval_cache::val_type
+    special_flag: 0
+    val_name:
+      -
+  - name: rval_cache::cache_type
+    special_flag: 0
+    val_name:
+      -
+  - name: (unnamed class_struct_union)::type
+    special_flag: 0
+    val_name:
+      -

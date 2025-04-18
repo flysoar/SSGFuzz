@@ -24,7 +24,7 @@ class GlobalAccess instanceof VariableAccess {
   string getName() { result = super.getTarget().getQualifiedName() }
 }
 
-//统计一个stmt中全局变量访问
+
 string stmtGlobalAccessCount(Stmt stmt) {
   result =
     concat(GlobalAccess ga |
@@ -34,13 +34,13 @@ string stmtGlobalAccessCount(Stmt stmt) {
     )
 }
 
-//统计一个函数中全局变量访问
+
 string functionGlobalAccessCount(Function f) {
   result =
     concat(GlobalAccess ga | ga.(VariableAccess).getEnclosingFunction() = f | ga.getName(), " , ")
 }
 
-//统计stmt以及其调用的函数中全局变量访问
+
 string stmtDoGolobalAccessCount(Stmt stmt) {
   result =
     stmtGlobalAccessCount(stmt) + " , " +
@@ -55,7 +55,7 @@ string stmtDoGolobalAccessCount(Stmt stmt) {
       )
 }
 
-//统计函数以及其调用的函数中全局变量访问
+
 language[monotonicAggregates]
 string functionCountainGlobalAccessCount(Function f) {
   if exists(int c | c = f.getMetrics().getNumberOfLinesOfCode())
@@ -75,7 +75,7 @@ string functionCountainGlobalAccessCount(Function f) {
   else result = ""
 }
 
-//获取IF中True分支的全局变量访问
+
 string ifTrueGlobalAccessCount(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof IfStmt and
   exists(Stmt stmt |
@@ -85,7 +85,7 @@ string ifTrueGlobalAccessCount(VariableAccess ac, Expr scope) {
   scope = ac.getEnclosingElement().(ComparisonOperation).getRightOperand()
 }
 
-//获取IF中False分支的全局变量访问
+
 string ifFalseGlobalAccessCount(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof IfStmt and
   exists(Stmt stmt |
@@ -95,7 +95,7 @@ string ifFalseGlobalAccessCount(VariableAccess ac, Expr scope) {
   scope = ac.getEnclosingElement().(ComparisonOperation).getRightOperand()
 }
 
-//获取Switch中的全局变量访问
+
 string switchGlobalAccessCount(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof SwitchStmt and
   exists(SwitchCase case |

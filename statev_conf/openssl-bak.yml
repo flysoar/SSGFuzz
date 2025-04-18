@@ -1,0 +1,16 @@
+Type:
+  -
+State:
+  -
+Unknown:
+  - ssl3_record_st::rec_version
+  - ssl_st::client_version
+  - ssl_st::version
+  - ssl_session_st::ssl_version
+  - asn1_string_st::flags
+  - asn1_string_st::type
+  - bignum_st::flags
+  - (unnamed_class_struct_union)::ssl_version
+  - (unnamed_class_struct_union)::version
+  - rsa_st::version
+  - (unnamed_class_struct_union)::in_read_app_data

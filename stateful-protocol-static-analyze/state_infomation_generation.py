@@ -11,10 +11,10 @@ class StateMachineInfo:
     state_id = 0
     state_list: List['StateValueInfo'] = field(default_factory=list)
     state_type = StateMachineType.UnknownType.value
-    code_weight = 0  # 代码行数权重
-    variable_weight = 0  # 全局变量权重，或者说是对全局变量的影响的权重
-    default_code_weight = 0  # 测试过程中，新发现的状态值的默认代码权重
-    default_variable_weight = 0  # 测试过程中，新发现的状态值的默认全局变量权重
+    code_weight = 0 
+    variable_weight = 0  
+    default_code_weight = 0  
+    default_variable_weight = 0 
     special_flag = 0
     texted_flag = 0
     flag_list: List['str'] = field(default_factory=list)
@@ -27,8 +27,8 @@ class StateValueInfo:
     state_id = 0
     code_weight = 0
     variable_weight = 0
-    next_statevalue: List['StateValuePair'] = field(default_factory=list)  # 可转移到的状态
-    compare_relation_statevalue: List['StateValuePair'] = field(default_factory=list)  # 可转移到的状态
+    next_statevalue: List['StateValuePair'] = field(default_factory=list) 
+    compare_relation_statevalue: List['StateValuePair'] = field(default_factory=list) 
     metric_cc = 0
     metric_io = 0
     metric_to = 0
@@ -103,9 +103,6 @@ class StateInfomationGeneration:
                             if self.is_available_state_value(t_state):
                                 state_value_info.metric_io +=1
 
-
-
-                        #使用代码行数和全局变量修改次数作为权重，代码行数为0时，使用默认权重，原因是代码行数不可能为0出现了边界情况所以置为默认值；全局变量修改次数为0时，使用1，目的是保证在调度时，发现了新路径会带来正向反馈.
                         state_value_info.code_weight = state_value.code_of_line
                         state_value_info.variable_weight = state_value.global_assign_num
 
@@ -220,7 +217,6 @@ class StateInfomationGeneration:
                         state_machine_info.state_id = self.get_a_state_id()
                         state_machine_info.state_type = state_machine.state_type.value
 
-                        #Now, use 10 as the default value, for log10(10) = 1, it is a good value for the default value.
                         state_machine_info.code_weight = 0
                         state_machine_info.variable_weight = 0
 
@@ -287,7 +283,6 @@ class StateInfomationGeneration:
                     state_machine_info.name = state_machine.name
                     state_machine_info.state_type = state_machine.state_type
 
-                    #Now, use 10 as the default value, for log10(10) = 1, it is a good value for the default value, because we don't know the real value, so we use the value that can not change the fuzz time and select time's value.
                     state_machine_info.code_weight = 0
                     state_machine_info.variable_weight = 0
                     state_machine_info.default_code_weight = 0

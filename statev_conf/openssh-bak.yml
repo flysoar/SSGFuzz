@@ -1,0 +1,21 @@
+Type:
+  -
+State:
+  - session_state::compression_in_started
+  - session_state::compression_out_started
+  - use_privsep
+Unknown:
+  - ssh::state
+  - (unnamed class_struct_union)::add_keys_to_agent
+  - (unnamed class_struct_union)::canonicalize_hostname
+  - (unnamed class_struct_union)::cipher
+  - (unnamed class_struct_union)::control_master
+  - (unnamed class_struct_union)::escape_char
+  - (unnamed class_struct_union)::log_level
+  - (unnamed class_struct_union)::max_startups_rate
+  - (unnamed class_struct_union)::num_auth_methods
+  - (unnamed class_struct_union)::permit_root_login
+  - (unnamed class_struct_union)::request_tty
+  - (unnamed class_struct_union)::strict_host_key_checking
+  - (unnamed class_struct_union)::strict_host_key_checking
+  - (unnamed class_struct_union)::tun_remote

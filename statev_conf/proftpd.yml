@@ -1,0 +1,121 @@
+Type:
+  - name: cmd_struc::cmd_class
+    special_flag: 1
+    val_name:
+      - CL_NONE,0
+      - CL_AUTH,1
+      - CL_INFO,2
+      - CL_DIRS,4
+      - CL_READ,8
+      - CL_WRITE,16
+      - CL_MISC,32
+      - CL_SEC,64
+      - CL_CONNECT,128
+      - CL_DISCONNECT,256
+      - CL_SSH,512
+      - CL_SFTP,1024
+State:
+  - name: (unnamed class_struct_union)::disconnect_reason
+    special_flag: 0
+    val_name:
+      -
+  - name: class_struc::cls_satisfy
+    special_flag: 0
+    val_name:
+      -
+  - name: facts_opts
+    special_flag: 0
+    val_name:
+      -
+  - name: (unnamed_class_struct_union)::sf_flags
+    special_flag: 1
+    val_name:
+      - SF_PASSIVE,1
+      - SF_ABORT,2
+      - SF_XFER,4
+      - SF_ASCII,16
+      - SF_ASCII_OVERRIDE,32
+      - SF_ANON,64
+      - SF_POST_ABORT,256
+      - SF_PORT,512
+      - SF_EPSV_ALL,1024
+  - name: (unnamed_class_struct_union)::xfer_type
+    special_flag: 1
+    val_name:
+      - STOR_DEFAULT,0
+      - STOR_APPEND,1
+      - STOR_HIDDEN,2
+      - STOR_UNIQUE,3
+Unknown:
+  - name: display_mode
+    special_flag: 0
+    val_name:
+      -
+  - name: proc_flags
+    special_flag: 0
+    val_name:
+      -
+  - name: (unnamed class_struct_union)::c
+    special_flag: 0
+    val_name:
+      -
+  - name: (unnamed class_struct_union)::direction
+    special_flag: 0
+    val_name:
+      -
+  - name: (unnamed class_struct_union)::sch_magic
+    special_flag: 0
+    val_name:
+      -
+  - name: (unnamed class_struct_union)::strm_mode
+    special_flag: 0
+    val_name:
+      -
+  - name: (unnamed class_struct_union)::strm_type
+    special_flag: 0
+    val_name:
+      -
+  - name: cmd_struc::argc
+    special_flag: 0
+    val_name:
+      -
+  - name: cmd_struc::config
+    special_flag: 0
+    val_name:
+      -
+  - name: config_struc::argc
+    special_flag: 0
+    val_name:
+      -
+  - name: config_struc::config_type
+    special_flag: 0
+    val_name:
+      -
+  - name: fh_rec::fh_fd
+    special_flag: 0
+    val_name:
+      -
+  - name: json_node_st::tag
+    special_flag: 0
+    val_name:
+      -
+  - name: logfmt_json_info::json_type
+    special_flag: 0
+    val_name:
+      -
+  - name: pr_netacl_t::addr
+    special_flag: 0
+    val_name:
+      -
+  - name: ServerType
+    special_flag: 0
+    val_name:
+      -
+  - name: sock_type
+    special_flag: 0
+    val_name:
+      -
+  - name: var::v_type
+    special_flag: 0
+    val_name:
+      -

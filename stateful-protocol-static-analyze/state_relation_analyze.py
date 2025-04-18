@@ -6,7 +6,6 @@ import seaborn as sns
 import os
 
 
-#用于为分析状态机赋值
 class Model:
     def __init__(self) -> None:
         return
@@ -24,19 +23,14 @@ class StateAnalyzer:
         self.state_machine_relation_graph_m = Model()
         self.state_machine_relation_graph = None
 
-        #为每一个状态机分配标记颜色
         palette = sns.color_palette('pastel', len(self.state_machine_list.keys())).as_hex()
         for state_name in self.state_machine_list.keys():
             self.state_machine_colors[state_name] = palette.pop()
 
-        #print(self.state_machine_colors)
-
-    #获取状态机的赋值表达式所涉及到的变量
     def get_state_machine_depend(self, name):
         state_machine = self.state_machine_list[name]
         return state_machine.get_depend()
     
-    #获取状态机赋值表达式所涉及的状态变量
     def get_state_machine_depend_statev(self, name):
         state_machine = self.state_machine_list[name]
         depend_list = state_machine.get_depend()
@@ -48,7 +42,6 @@ class StateAnalyzer:
                     ret.append(val['Value'])
         return ret
     
-    #获取状态机赋值表达式所涉及的其他全局变量和成员变量，不包含状态变量
     def get_state_machine_depend_other_globalv(self, name):
         state_machine = self.state_machine_list[name]
         depend_list = state_machine.get_depend()
@@ -65,7 +58,6 @@ class StateAnalyzer:
 
         return ret
     
-    #获取状态机赋值表达式所涉及的本地变量和参数
     def get_state_machine_depend_localv(self, name):
         state_machine = self.state_machine_list[name]
         depend_list = state_machine.get_depend()
@@ -79,7 +71,6 @@ class StateAnalyzer:
 
         return ret
     
-    #获取状态机赋值表达式所涉及的函数调用
     def get_state_machine_depend_functioncall(self, name):
         state_machine = self.state_machine_list[name]
         depend_list = state_machine.get_depend()
@@ -93,7 +84,6 @@ class StateAnalyzer:
 
         return ret
     
-    #获取可用影响当前状态机的其他状态机
     def get_state_machine_infected_state(self, name):
         ret = []
         for state_machine_name in self.state_machine_list.keys():
@@ -105,13 +95,11 @@ class StateAnalyzer:
 
         return ret
     
-    #为每个状态机构建自身的状态转移图
     def build_state_machine_graphs(self):
         for state_machine_name in self.state_machine_list.keys():
             state_machine = self.state_machine_list[state_machine_name]
             self.state_machine_graphs[state_machine_name] = self.build_state_machine_graph(state_machine)
             
-    #为单个状态机构建自身的状态转移图
     def build_state_machine_graph(self, state_machine:StateMachine) -> Machine:
         state_list = []
         
@@ -120,7 +108,6 @@ class StateAnalyzer:
 
         machine = GraphMachine(model=state_machine, states=state_list, initial='init')
         machine.style_attributes['node'][self.state_machine_colors[state_machine.name]] = {'fillcolor': self.state_machine_colors[state_machine.name]}
-        #print('set %s %s' % (state_machine.name, self.state_machine_colors[state_machine.name]))
 
 
         for trans in state_machine.same_transition_list.values():
@@ -190,7 +177,6 @@ class StateAnalyzer:
         path = os.path.join(dir, 'all' + '.png')
         self.get_graph().draw(path, prog='dot')
 
-    #构建状态变量之间的影像图
     def build_state_machine_relation_graph(self):
         state_names = list(self.state_machine_list.keys())
 
@@ -210,7 +196,6 @@ class StateAnalyzer:
         path = os.path.join(dir, 'relation' + '.png')
         self.state_machine_relation_graph.get_graph().draw(path, prog='dot')
 
-    #构建状态变量对不同的全局变量的依赖图
     def build_state_machine_rely_graph(self):        
         val_lsit = []
         for state_machine_name in self.state_machine_list.keys():
@@ -233,8 +218,6 @@ class StateAnalyzer:
         if not os.path.exists(dir):
             os.makedirs(dir)
         path = os.path.join(dir, 'rely' + '.png')
-
-        #print(self.global_rely_lists)
                 
         for val in self.global_rely_lists.keys():
             state_machine_names = self.global_rely_lists[val]
@@ -246,10 +229,8 @@ class StateAnalyzer:
 
             m.get_graph().draw(path.replace('.png', '_' + val + '.png').replace('(unnamed class/struct/union)', '(unnamed class_struct_union)'), prog='dot')
             
-    #判断状态变量的类型
     def judge_state_machine_type(self, name):
         state_machine = self.state_machine_list[name]
-        #变量的名称语义拥有较高优先级
         if state_machine.is_state_type_by_name():
             return StateMachineType.StateType
         elif state_machine.is_message_type_by_name():
@@ -257,7 +238,6 @@ class StateAnalyzer:
         elif state_machine.is_length_type_by_name():
             return StateMachineType.LengthType
         else:
-            #变量的表达式结构优先级较低
             if state_machine.is_state_type_by_struct():
                 return StateMachineType.StateType
             elif state_machine.is_message_type_by_struct():

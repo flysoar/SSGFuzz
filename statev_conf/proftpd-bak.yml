@@ -1,0 +1,30 @@
+Type:
+  - cmd_struc::cmd_class
+
+State:
+  - (unnamed class_struct_union)::disconnect_reason
+  - (unnamed class_struct_union)::xfer_type
+  - auth_caching
+  - class_struc::cls_satisfy
+  - facts_mlinfo_opts
+  - facts_opts
+
+Unknown:
+  - display_mode
+  - proc_flags
+  - (unnamed class_struct_union)::c
+  - (unnamed class_struct_union)::direction
+  - (unnamed class_struct_union)::sch_magic
+  - (unnamed class_struct_union)::strm_mode
+  - (unnamed class_struct_union)::strm_type
+  - cmd_struc::argc
+  - cmd_struc::config
+  - config_struc::argc
+  - config_struc::config_type
+  - fh_rec::fh_fd
+  - json_node_st::tag
+  - logfmt_json_info::json_type
+  - pr_netacl_t::addr
+  - ServerType
+  - sock_type
+  - var::v_type

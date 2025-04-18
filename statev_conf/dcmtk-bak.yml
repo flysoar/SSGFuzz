@@ -1,0 +1,18 @@
+Type:
+  - DUL_PRESENTATIONCONTEXT::acceptedSCRole
+  - T_ASC_PresentationContext::acceptedRole
+  - T_DIMSE_C_EchoRSP::opts
+  - T_DIMSE_C_FindRSP::opts
+  - PRIVATE_ASSOCIATIONKEY::inputPDU
+  - DUL_PRESENTATIONCONTEXT::proposedSCRole
+  - PRV_SCUSCPROLE::SCPRole
+  - PRV_SCUSCPROLE::SCURole
+  - T_ASC_PresentationContext::proposedRole
+State:
+  - 
+Unknown:
+  - DcmByteString::fStringMode
+  - T_DIMSE_Message::CommandField
+  - T_DIMSE_C_GetRQ::Priority
+  - T_DIMSE_C_FindRQ::Priority
+  - yy_buffer_state::yy_buffer_status

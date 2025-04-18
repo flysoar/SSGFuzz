@@ -13,7 +13,6 @@ predicate functionContain(VariableAccess sc, Function f) {
   )
 }
 
-//判定if的true分支中是否存在对状态变量的赋值，以及调用的函数中是否存在对状态变量的赋值
 predicate ifTrueExistStateAssign(
   VariableAccess ac, VariableAccess sc, Expr scope, Expr target, Stmt stmt
 ) {
@@ -33,7 +32,6 @@ predicate ifTrueExistStateAssign(
 
 
 
-//判定if的false分支中是否存在对状态变量的赋值，以及调用的函数中是否存在对状态变量的赋值
 predicate ifFalseExistStateAssign(
   VariableAccess ac, VariableAccess sc, Expr scope, Expr target, Stmt stmt
 ) {
@@ -51,7 +49,6 @@ predicate ifFalseExistStateAssign(
   target = sc.getEnclosingElement().(Assignment).getRValue()
 }
 
-//判定switch中是否存在对状态变量的赋值，以及调用的函数中是否存在对状态变量的赋值
 predicate switchExistStateAssign(
   VariableAccess ac, VariableAccess sc, Expr scope, Expr target, Stmt stmt
 ) {
@@ -75,12 +72,12 @@ predicate switchExistStateAssign(
   )
 }
 
-//提取出所有的子表达式
+
 predicate getAllChildExpr(Expr e, Expr c) {
   if not e instanceof Operation then c = e else getAllChildExpr(e.(Operation).getAnOperand(), c)
 }
 
-//将表达式转换为全局变量、成员变量和确定值
+
 Expr getExtractExpr(Stmt stmt, Expr e) {
   (
     //达成目标
@@ -95,7 +92,6 @@ Expr getExtractExpr(Stmt stmt, Expr e) {
   ) and
   result = e
   or
-  //当变量为本地变量时
   e.(VariableAccess).getTarget() instanceof SemanticStackVariable and
   exists(SemanticStackVariable localv, Expr def, Expr defv |
     localv = e.(VariableAccess).getTarget() and
@@ -104,9 +100,7 @@ Expr getExtractExpr(Stmt stmt, Expr e) {
     result = getExtractExpr(stmt, defv)
   )
   or
-  //当变量为参数时
   e.(VariableAccess).getTarget() instanceof Parameter and
-  //如果参数位于判定条件所在函数，则达成目标，不进行处理
   not e.getEnclosingFunction() = stmt.getEnclosingFunction() and
   exists(FunctionCall call, int i, Expr def, Expr defv, Variable pv, Function cf |
     cf = e.getEnclosingFunction() and
@@ -119,14 +113,12 @@ Expr getExtractExpr(Stmt stmt, Expr e) {
   )
   or
   e.(VariableAccess).getTarget() instanceof Parameter and
-  //如果参数位于判定条件所在函数，则达成目标，不进行处理
   exists(Function f |
     f = e.getEnclosingFunction() and
     f = stmt.getEnclosingFunction()
   ) and
   result = e
   or
-  //其他情况，对表达式先进行分解，再进行处理
   e instanceof Operation and
   exists(Expr c |
     getAllChildExpr(e, c) and
@@ -134,7 +126,6 @@ Expr getExtractExpr(Stmt stmt, Expr e) {
   )
 }
 
-//逐渐查找从判定到赋值的路径上的call调用
 FunctionCall getContainCall(Function contain_func, Function f) {
   exists(FunctionCall call |
     call.getEnclosingFunction() = contain_func and
@@ -142,7 +133,6 @@ FunctionCall getContainCall(Function contain_func, Function f) {
   )
 }
 
-//获取从判定到赋值路径上的对应函数的call调用
 FunctionCall getPathFunctionCall(Stmt stmt, Function f) {
   exists(FunctionCall call |
     stmt = call.getEnclosingStmt().getParent*() and
@@ -150,7 +140,7 @@ FunctionCall getPathFunctionCall(Stmt stmt, Function f) {
   )
 }
 
-//可以识别出来模板的情况，但是这种情况目前不知道有什么用处
+
 //example: InterData = new DiMonoCopyTemplate<Sint32>(image->InterData, fstart, fcount, fsize);
 Expr getTTAllChildExpr(Expr e) {
   exists(Expr c, Operation o |
@@ -168,7 +158,6 @@ Expr getTTAllChildExpr(Expr e) {
   result = e
 }
 
-//fixme: 无法处理循环递归的情况
 language[monotonicAggregates]
 string getExtractDetials(Stmt stmt, Expr e) {
   e.isConstant() and
@@ -179,7 +168,6 @@ string getExtractDetials(Stmt stmt, Expr e) {
   not e.isConstant() and
   (
     (
-      //达成目标
       e.(VariableAccess).getTarget() instanceof MemberVariable and
       result =
         "{" + "\"Class\": \"Val\"," + "\"SubClass\":\"Member\"," + "\"Value\":\"" +
@@ -195,7 +183,6 @@ string getExtractDetials(Stmt stmt, Expr e) {
           "}"
     )
     or
-    //当变量为本地变量时
     e.(VariableAccess).getTarget() instanceof LocalVariable and
     if not exists(Expr def | definitionUsePair(e.(VariableAccess).getTarget(), def, e))
     then
@@ -213,9 +200,7 @@ string getExtractDetials(Stmt stmt, Expr e) {
             getExtractDetials(stmt, def), ","
           ) + "]}" // result = e.toString()
     or
-    //当变量为参数时
     e.(VariableAccess).getTarget() instanceof Parameter and
-    //如果参数位于判定条件所在函数，则达成目标，不进行处理
     if
       exists(Function f |
         f = e.getEnclosingFunction() and
@@ -241,7 +226,6 @@ string getExtractDetials(Stmt stmt, Expr e) {
             getExtractDetials(stmt, def), ","
           ) + "]} " // result = e.toString()
     or
-    //其他情况，对表达式先进行分解，再进行处理
     e instanceof Operation and
     result =
       "{" + "\"Class\": \"Op\"," + "\"Operator\":\"" + e.(Operation).getOperator() + "\"," +
@@ -273,7 +257,6 @@ string getConditionExtractDetials(Expr e) {
   not e.isConstant() and
   (
     (
-      //达成目标
       e.(VariableAccess).getTarget() instanceof MemberVariable and
       result =
         "{" + "\"Class\": \"Val\"," + "\"SubClass\":\"Member\"," + "\"Value\":\"" +
@@ -289,22 +272,18 @@ string getConditionExtractDetials(Expr e) {
           "}"
     )
     or
-    //当变量为本地变量时
     e.(VariableAccess).getTarget() instanceof LocalVariable and
     result =
       "{" + "\"Class\": \"Val\"," + "\"SubClass\":\"Local\"," + "\"Value\":\"" +
         e.(VariableAccess).getTarget().(LocalVariable).getName() + "\"," + "\"Type\":\"" +
         e.(VariableAccess).getTarget().(LocalVariable).getUnspecifiedType().toString() + "\"" + "}"
     or
-    //当变量为参数时
     e.(VariableAccess).getTarget() instanceof Parameter and
-    //如果参数位于判定条件所在函数，则达成目标，不进行处理
     result =
       "{" + "\"Class\": \"Val\"," + "\"SubClass\":\"Parameter\"," + "\"Value\":\"" +
         e.(VariableAccess).getTarget().(Parameter).getName() + "\"," + "\"Type\":\"" +
         e.(VariableAccess).getTarget().(Parameter).getUnspecifiedType().toString() + "\"" + "}"
     or
-    //其他情况，对表达式先进行分解，再进行处理
     e instanceof Operation and
     result =
       "{" + "\"Class\": \"Op\"," + "\"Operator\":\"" + e.(Operation).getOperator() + "\"," +

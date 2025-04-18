@@ -1,0 +1,110 @@
+Type:
+  - name: query_params::type
+    special_flag: 0
+    val_name:
+      - Q_ITEMS,1
+      - Q_PL,2
+      - Q_FIND_PL,3
+      - Q_PLITEMS,4
+      - Q_GROUP_ALBUMS,5
+      - Q_GROUP_ARTISTS,6
+      - Q_GROUP_ITEMS,7
+      - Q_GROUP_DIRS,8
+      - Q_COUNT_ITEMS,9
+      - Q_BROWSE_ARTISTS,32769
+      - Q_BROWSE_ALBUMS,32770
+      - Q_BROWSE_GENRES,32771
+      - Q_BROWSE_COMPOSERS,32772
+      - Q_BROWSE_YEARS,32773
+      - Q_BROWSE_DISCS,32774
+      - Q_BROWSE_TRACKS,32775
+      - Q_BROWSE_VPATH,32776
+      - Q_BROWSE_PATH,32777
+  - name: query_params::idx_type
+    special_flag: 0
+    val_name:
+      - I_NONE,0
+      - I_FIRST,1
+      - I_LAST,2
+      - I_SUB,3
+  - name: evrtsp_request::type
+    special_flag: 0
+    val_name:
+      - EVRTSP_REQ_ANNOUNCE,0
+      - EVRTSP_REQ_OPTIONS,1
+      - EVRTSP_REQ_SETUP,2
+      - EVRTSP_REQ_RECORD,3
+      - EVRTSP_REQ_PAUSE,4
+      - EVRTSP_REQ_GET_PARAMETER,5
+      - EVRTSP_REQ_SET_PARAMETER,6
+      - EVRTSP_REQ_FLUSH,7
+      - EVRTSP_REQ_TEARDOWN,8
+      - EVRTSP_REQ_POST,9
+  - name: raop_extra::devtype
+    special_flag: 0
+    val_name:
+      - RAOP_DEV_APEX1_80211G,0
+      - RAOP_DEV_APEX2_80211N,1
+      - RAOP_DEV_APEX3_80211N,2
+      - RAOP_DEV_APPLETV,3
+      - RAOP_DEV_APPLETV4,4
+      - RAOP_DEV_HOMEPOD,5
+      - RAOP_DEV_OTHER,6
+State:
+  - name: http_client_ctx::response_code
+    special_flag: 0
+    val_name:
+      -
+  - name: player_seek_param::mode
+    special_flag: 0
+    val_name:
+      - PLAYER_SEEK_POSITION , 1
+      - PLAYER_SEEK_RELATIVE, 2
+  - name: query_params::sort
+    special_flag: 0
+    val_name:
+      - S_NONE,0
+      - S_NAME,1
+      - S_ALBUM,2
+      - S_ARTIST,3
+      - S_PLAYLIST,4
+      - S_YEAR,5
+      - S_GENRE,6
+      - S_COMPOSER,7
+      - S_DISC,8
+      - S_TRACK,9
+      - S_VPATH,10
+      - S_POS,11
+      - S_SHUFFLE_POS,12
+      - S_DATE_RELEASED,13
+  - name: evrtsp_connection::state
+    special_flag: 0
+    val_name:
+      - EVCON_DISCONNECTED,0
+      - EVCON_CONNECTING,1
+      - EVCON_IDLE,2
+      - EVCON_READING_FIRSTLINE,3
+      - EVCON_READING_HEADERS,4
+      - EVCON_READING_BODY,5
+      - EVCON_READING_TRAILER,6
+      - EVCON_WRITING,7
+  - name: player_status::status
+    special_flag: 0
+    val_name:
+      - PLAY_STOPPED, 2,
+      - PLAY_PAUSED, 3,
+      - PLAY_PLAYING, 4,
+  - name: player_state
+    special_flag: 0
+    val_name:
+      - PLAY_STOPPED, 2,
+      - PLAY_PAUSED, 3,
+      - PLAY_PLAYING, 4,
+  - name: repeat
+    special_flag: 0
+    val_name:
+      - REPEAT_OFF,0
+      - REPEAT_SONG,1
+      - REPEAT_ALL,2
+Unknown:
+  -

@@ -10,7 +10,6 @@ from typing import Dict
 from enum import Enum
 import yaml
 
-#状态变量类型，目前为3种，最后一种为未知，为之后的扩展提供空间
 class StateMachineType(Enum):
     StateType = 1
     MessageType = 2
@@ -26,20 +25,20 @@ class StateMachine:
         self.state_list: Dict[str, StateValue] = {}
         self.state_type = StateMachineType.UnknownType
 
-        self.same_transition_list = {} #同一状态内的转换
-        self.other_transition_list = {} #不同状态间的转换
+        self.same_transition_list = {} 
+        self.other_transition_list = {} 
 
-        self.total_code_of_line = 0 #总代码行数，各个状态值求和
-        self.total_global_access_num = 0 #全局变量访问次数，各个状态值求和
-        self.total_global_assign_num = 0 #全局变量赋值次数，各个状态值求和
+        self.total_code_of_line = 0 
+        self.total_global_access_num = 0 
+        self.total_global_assign_num = 0 
         self.global_access_list = []
         self.global_assign_list = []
-        self.median_code_of_line = 0 #代码行数中位数，各个状态值求中位
-        self.median_global_access_num = 0 #全局变量访问次数中位数，各个状态值求中位
-        self.median_global_assign_num = 0 #全局变量赋值次数中位数，各个状态值求中位
-        self.mode_code_of_line = 0 #代码行数众数，各个状态值求众数
-        self.mode_global_access_num = 0 #全局变量访问次数众数，各个状态值求众数
-        self.mode_global_assign_num = 0 #全局变量赋值次数众数，各个状态值求众数
+        self.median_code_of_line = 0 
+        self.median_global_access_num = 0 
+        self.median_global_assign_num = 0 
+        self.mode_code_of_line = 0 
+        self.mode_global_access_num = 0 
+        self.mode_global_assign_num = 0 
 
         self.special_flag = 0
         self.texted_flag = 0
@@ -81,9 +80,7 @@ class StateMachine:
 
         return ret
     
-    #判断该状态变量是否为状态类型
     def is_state_type_by_name(self)->bool:
-        #通过变量名判断是否为状态变量
         rname = self.name.split('::')[-1]
         if 'state' in rname.lower():
             return True
@@ -97,17 +94,13 @@ class StateMachine:
     
     def is_state_type_by_struct(self)->bool:
         
-        #TODO: 通过变量的赋值表达式和变量行为判断判断是否为状态变量
-        #如果赋值表达式数量为0，直接不进行判定
         if len(self.state_list) == 0:
             return False
 
-        #所有的状态表达式均为常数或是位运算
         for statev in self.state_list.values():
             if not statev.is_constant() and not statev.is_only_bit_op():
                 return False
             
-        #不仅仅只有0，1，-1两个常量
         other_constant_count = 0
         for statev in self.state_list.values():
             if statev.is_constant():
@@ -117,13 +110,11 @@ class StateMachine:
         if other_constant_count == 0:
             return False
 
-        #状态转移的占比大于0.5，随意给的数值
         state_tran_rate = len(self.same_transition_list) / float(len(self.state_list))
 
         if state_tran_rate < 0.5:
             return False
         
-        #不存在new表达式
         for statev in self.state_list.values():
             if 'new' in statev.get_expr_str():
                 return False
@@ -131,7 +122,6 @@ class StateMachine:
         return True
     
     def is_message_type_by_name(self)->bool:
-        #通过变量名判断是否为类型变量
         rname = self.name.split('::')[-1]
         if 'type' in rname.lower():
             return True
@@ -146,8 +136,6 @@ class StateMachine:
         return False
         
     def is_message_type_by_struct(self)->bool:
-        #TODO: 通过变量的赋值表达式和变量行为判断判断是否为类型变量
-        #如果赋值表达式数量为0，直接不进行判定
         if len(self.state_list) == 0:
             return False
 
@@ -156,12 +144,10 @@ class StateMachine:
             if statev.is_constant():
                 constant_count = constant_count + 1
 
-        #常量占比大于0.7，随意给的数值
         constant_rate = constant_count / float(len(self.state_list))
         if constant_rate < 0.7:
             return False
         
-        #不仅仅只有0，1，-1两个常量
         other_constant_count = 0
         for statev in self.state_list.values():
             if statev.is_constant():
@@ -170,7 +156,6 @@ class StateMachine:
         if other_constant_count == 0:
             return False
         
-        #不存在new表达式
         for statev in self.state_list.values():
             if 'new' in statev.get_expr_str():
                 return False
@@ -178,7 +163,6 @@ class StateMachine:
         return True
     
     def is_length_type_by_name(self)->bool:
-        #通过变量名判断是否为长度变量
         rname = self.name.split('::')[-1]
         if 'length' in rname.lower():
             return True
@@ -196,12 +180,9 @@ class StateMachine:
     
     def is_length_type_by_struct(self)->bool:
         
-        #TODO: 通过变量的赋值表达式和变量行为判断判断是否为长度变量
-        #如果赋值表达式数量为0，直接不进行判定
         if len(self.state_list) == 0:
             return False
         
-        #存在表达式有加减运算且运算中涉及到的变量可能为长度变量
         for statev in self.state_list.values():
             if statev.may_lenth_type():
                 return True
@@ -213,9 +194,9 @@ class StateMachine:
 
 class StateValue:
     def __init__(self, op:str, statev:StateMachine, expr:dict, name='') -> None:
-        self.op = op #==, !=, >, <, >=, <=, Unknown. fixme: +=, -=, *=, /=, &=, |=, ^=, %=, <<=, >>=, >>>=等情况处理
-        self.statev = statev #所属状态机
-        self.expr = expr #原始表达式
+        self.op = op #==, !=, >, <, >=, <=, Unknown. fixme: +=, -=, *=, /=, &=, |=, ^=, %=, <<=, >>=, >>>=
+        self.statev = statev 
+        self.expr = expr 
         self.name = name
 
         self.same_next_state_list: Dict[str, StateValue] = {}
@@ -225,17 +206,17 @@ class StateValue:
         self.same_state_transition_list: Dict[str, StateTransition] = {}
         self.other_state_transition_list: Dict[str, StateTransition] = {}
 
-        self.code_of_line = 0 #代码行数
-        self.cycle_complexity = 0 #圈复杂度
-        self.halstead_n1 = 0 #Halstead n1
-        self.halstead_n2 = 0 #Halstead n2
-        self.halstead_N1 = 0 #Halstead N1
-        self.halstead_N2 = 0 #Halstead N2
-        self.maintainnbility_index = 1 #可维护性指数
-        self.global_access_list = [] #全局变量访问类型
-        self.global_access_num = 0 #全局变量访问次数
-        self.global_assign_list = [] #全局变量赋值类型
-        self.global_assign_num = 0 #全局变量赋值次数
+        self.code_of_line = 0 
+        self.cycle_complexity = 0 
+        self.halstead_n1 = 0 
+        self.halstead_n2 = 0 
+        self.halstead_N1 = 0 
+        self.halstead_N2 = 0 
+        self.maintainnbility_index = 1 
+        self.global_access_list = [] 
+        self.global_access_num = 0 
+        self.global_assign_list = [] 
+        self.global_assign_num = 0 
 
         self.metric_to = 1
         self.metric_cc = 1
@@ -275,12 +256,11 @@ class StateValue:
                 self.other_next_state_list[str(next_state)] = next_state
                 self.other_state_transition_list[str(state_transition)] = state_transition
 
-    #当前考虑运算符
+
     def __str__(self) -> str:
         expr_str = self.get_expr_str()
         return self.statev.name + " : " + self.op + " " + expr_str
-    
-    #当前考虑运算符
+
     def __eq__(self, __value: 'StateValue') -> bool:
         return str(self) == str(__value)
 
@@ -302,18 +282,17 @@ class StateTransition:
 
 
 
-#只对去除了split的表达式进行解析
 class ExprParser:
     def __init__(self, expr:dict) -> None:
         self.expr = expr
         self.val_list = []
         self.constant = False
-        self.constant_value = 0 #只要在表达式所有涉及到变量均为常量，即is_constant为真时才有意义
-        self.only_bit_op = True #只有位运算
-        self.alt_op = False #有位运算和算术运算
-        self.contain_len_type_expr = False #包含长度类型的表达式
+        self.constant_value = 0 
+        self.only_bit_op = True 
+        self.alt_op = False 
+        self.contain_len_type_expr = False 
 
-        self._contain_op = False #是否存在运算操作
+        self._contain_op = False 
 
         self.expr_str_with_op = self.dispacth(expr)
         self.expr_str_without_op = self.get_expr_str_without_op()
@@ -409,8 +388,6 @@ class ExprParser:
 
 
 
-
-#处理多路径的表达中的split，对表达式进行分割
 class ExprSplit:
     def __init__(self, expr:dict) -> None:
         self.whole_expr = expr
@@ -421,11 +398,9 @@ class ExprSplit:
     def get_split_expr_list(self):
         return self.split_expr_list
 
-    #将表达式分割为多个表达式
     def split_expr(self):
         self.split_expr_list.append(self.whole_expr)
         
-        #只要表达式列表还存在分割表达，就继续分割
         while True:
             to_deal_expr = None
 
@@ -446,7 +421,6 @@ class ExprSplit:
                 #print("new extend " + str(new_expr))
                 self.split_expr_list.append(new_expr)
 
-    #分裂一次表达式，返回分裂后的结果
     def split_a_expr(self, expr:dict):
         target_expr = self.get_a_split_expr(expr)
         count = len(target_expr['Value'])
@@ -457,7 +431,7 @@ class ExprSplit:
             new_replace_expr = copy.deepcopy(replace_expr)
             #print("replace expr: " + str(replace_expr))
             if new_expr == target_expr:
-                new_expr = new_replace_expr #处理整个表达式需要被替换的情况
+                new_expr = new_replace_expr 
             else:
                 self.replace_expr(new_expr, target_expr, new_replace_expr)
             ret.append(new_expr)
@@ -465,7 +439,6 @@ class ExprSplit:
         return ret
 
 
-    #从表达式中获取一个分割表达式（代表不同执行路径而值不同的表达式）
     def get_a_split_expr(self, expr:dict):
         if expr['Class'] == 'Split' or expr['Class'] == 'CallSplit':
             return expr
@@ -479,7 +452,6 @@ class ExprSplit:
                 if ret != None:
                     return ret
 
-    #将表达式中的某个表达式替换为另一个表达式
     def do_replace_expr(self, expr:dict, target_expr:dict, replace_expr:dict):
         if expr == target_expr:
             raise "do_replace_expr replace: " + str(expr) + " with " + str(target_expr)
@@ -493,7 +465,6 @@ class ExprSplit:
                 for val in expr['Value']:
                     self.do_replace_expr(val, target_expr, replace_expr)
 
-    #将表达式中的某个表达式替换为另一个表达式,处理根表达式会被替换的情况
     def replace_expr(self, expr:dict, target_expr:dict, replace_expr:dict):
         if expr['Class'] == 'Val':
             raise "replace: " + str(expr) + " with " + str(target_expr)
@@ -546,7 +517,6 @@ class StateCollection:
                 self.state_machine_user_config['Unknown'].append(info['name'])
 
 
-    #获取到所有的状态机
     def obtain_state_machines(self,file_name:str):
         with open(file_name, 'r') as f:
             reader = csv.reader(f)
@@ -564,7 +534,6 @@ class StateCollection:
                 if state_name not in self.state_machine_list.keys():
                     self.state_machine_list[state_name] = StateMachine(state_name)
     
-    #获取原始的状态约束数据
     def obtain_state_relation(self, file_name:str):
         with open(file_name, 'r') as f:
             reader = csv.reader(f)
@@ -590,12 +559,8 @@ class StateCollection:
                 self.relation_list.append(content)
                 #print(content)
 
-    #从状态约束数据中，提取每个状态机可能的状态，以及状态之间的转换关系，需要首先调用obtain_state_relation获取原始数据
     def obtain_state_and_transitions(self):
         for data in self.relation_list:
-            #print()
-            #print("deal " + str(data))
-            #处理前置状态
             prev_state_name = data['StateVName']
             prev_state_op = self.get_state_assingment(data['Range'])
             prev_spliter = ExprSplit(data['Condition'])
@@ -623,7 +588,6 @@ class StateCollection:
         self.state_machine_list[prev_state.statev.name].append_transition(state_transition)
                     
 
-    #获取状态判断操作的判定条件，例如==, !=, >, <, <=等
     def get_state_assingment(self, range:dict):
         if range['Type'] == 'switch':
             return '=='
@@ -666,7 +630,6 @@ class StateCollection:
                 
 
         state_machine = self.state_machine_list[name]
-        #变量的名称语义拥有较高优先级
         if state_machine.is_state_type_by_name():
             return StateMachineType.StateType
         elif state_machine.is_message_type_by_name():
@@ -674,7 +637,6 @@ class StateCollection:
         elif state_machine.is_length_type_by_name():
             return StateMachineType.LengthType
         else:
-            #变量的表达式结构优先级较低
             if state_machine.is_state_type_by_struct():
                 return StateMachineType.StateType
             elif state_machine.is_message_type_by_struct():
@@ -686,7 +648,6 @@ class StateCollection:
             
     def judge_state_machine_type_by_name(self, name):
         state_machine = self.state_machine_list[name]
-        #变量的名称语义拥有较高优先级
         if state_machine.is_state_type_by_name():
             return StateMachineType.StateType
         elif state_machine.is_message_type_by_name():

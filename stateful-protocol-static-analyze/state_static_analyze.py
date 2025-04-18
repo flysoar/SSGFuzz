@@ -8,7 +8,6 @@ class StateStaticAnalyzer:
     def __init__(self, result_name, database_path, instrument_other=False):
         self.result_name = result_name
         self.database_path = database_path
-        #是否对判定为其他类型的变量进行插桩反馈
         self.instrument_other = instrument_other
 
         self.check_file_path()
@@ -64,7 +63,6 @@ class StateStaticAnalyzer:
         self.do_run_codeql("./find_statev_metric_gc.ql", self.state_gc_codeql_path)
         self.do_run_codeql("./find_state_compare_relation.ql", self.state_comapre_codeql_path)
 
-    #只进行静态分析，不进行插桩
     def do_static_analyz(self):
         self.run_codeql_analyze()
 
@@ -147,7 +145,6 @@ class StateStaticAnalyzer:
         return state_inrustment
 
 
-    #只进行绘图
     def draw_codeql_result_graph(self):
         self.graph_dir = os.path.join(self.result_path, "%s_graph" % self.result_name)
         if os.path.exists(self.graph_dir):

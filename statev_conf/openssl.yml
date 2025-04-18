@@ -1,0 +1,282 @@
+Type:
+  - name: GENERAL_NAME_st::type
+    special_flag: 0
+    val_name:
+      - GEN_OTHERNAME,0
+      - GEN_EMAIL,1
+      - GEN_DNS,2
+      - GEN_X400,3
+      - GEN_DIRNAME,4
+      - GEN_EDIPARTY,5
+      - GEN_URI,6
+      - GEN_IPADD,7
+      - GEN_RID,8
+  - name: evp_pkey_ctx_st::operation
+    special_flag: 0
+    val_name:
+      - EVP_PKEY_OP_UNDEFINED,0
+      - EVP_PKEY_OP_PARAMGEN,2
+      - EVP_PKEY_OP_KEYGEN,4
+      - EVP_PKEY_OP_PARAMFROMDATA,8
+      - EVP_PKEY_OP_KEYFROMDATA,16
+      - EVP_PKEY_OP_SIGN,32
+      - EVP_PKEY_OP_VERIFY,64
+      - EVP_PKEY_OP_VERIFYRECOVER,128
+      - EVP_PKEY_OP_SIGNCTX,256
+      - EVP_PKEY_OP_VERIFYCTX,512
+      - EVP_PKEY_OP_ENCRYPT,1024
+      - EVP_PKEY_OP_DECRYPT,2048
+      - EVP_PKEY_OP_DERIVE,4096
+  - name: x509_object_st::type
+    special_flag: 0
+    val_name:
+      - X509_LU_NONE,0
+      - X509_LU_X509,1
+      - X509_LU_CRL,2
+  - name: x509_st::ex_xkusage
+    special_flag: 1
+    val_name:
+      - XKU_SSL_SERVER,1
+      - XKU_SSL_CLIENT,2
+      - XKU_SMIME,4
+      - XKU_CODE_SIGN,8
+      - XKU_SGC,16
+      - XKU_OCSP_SIGN,32
+      - XKU_TIMESTAMP,64
+      - XKU_DVCS,128
+      - XKU_ANYEKU,256
+  - name: x509_st::ex_flags
+    special_flag: 1
+    val_name:
+      - EXFLAG_BCONS,1
+      - EXFLAG_KUSAGE,2
+      - EXFLAG_XKUSAGE,4
+      - EXFLAG_NSCERT,8
+      - EXFLAG_CA,16
+      - EXFLAG_SI,32
+      - EXFLAG_V1,64
+      - EXFLAG_INVALID,128
+      - EXFLAG_SET,256
+      - EXFLAG_CRITICAL,512
+      - EXFLAG_PROXY,1024
+      - EXFLAG_INVALID_POLICY,2048
+      - EXFLAG_FRESHEST,4096
+      - EXFLAG_SS,8192
+  - name: CMS_RecipientInfo_st::type
+    special_flag: 0
+    val_name:
+      - CMS_RECIPINFO_TRANS,0
+      - CMS_RECIPINFO_AGREE,1
+      - CMS_RECIPINFO_KEK,2
+      - CMS_RECIPINFO_PASS,3
+      - CMS_RECIPINFO_OTHER,4
+  - name: CMS_CertificateChoices::type
+    special_flag: 0
+    val_name:
+      - CMS_CERTCHOICE_CERT,0
+      - CMS_CERTCHOICE_EXCERT,1
+      - CMS_CERTCHOICE_V1ACERT,2
+      - CMS_CERTCHOICE_V2ACERT,3
+      - CMS_CERTCHOICE_OTHER,4
+  - name: ec_key_st::enc_flag
+    special_flag: 1
+    val_name:
+      - EC_PKEY_NO_PARAMETERS,1
+      - EC_PKEY_NO_PUBKEY,2
+  - name: ec_group_st::pre_comp_type
+    special_flag: 0
+    val_name:
+      - PCT_none,0
+      - PCT_nistp224,1
+      - PCT_nistp256,2
+      - PCT_nistp521,3
+      - PCT_nistz256,4
+      - PCT_ec,5
+  - name: X509_VERIFY_PARAM_st::flags
+    special_flag: 0
+    val_name:
+      - SSL3_RT_CHANGE_CIPHER_SPEC,20
+      - SSL3_RT_ALERT,21
+      - SSL3_RT_HANDSHAKE,22
+      - SSL3_RT_APPLICATION_DATA,23
+State:
+  - name: X509_VERIFY_PARAM_st::flags
+    special_flag: 1
+    val_name:
+      - X509_V_FLAG_USE_CHECK_TIME,2
+      - X509_V_FLAG_CRL_CHECK,4
+      - X509_V_FLAG_CRL_CHECK_ALL,8
+      - X509_V_FLAG_IGNORE_CRITICAL,16
+      - X509_V_FLAG_X509_STRICT,32
+      - X509_V_FLAG_ALLOW_PROXY_CERTS,64
+      - X509_V_FLAG_POLICY_CHECK,128
+      - X509_V_FLAG_EXPLICIT_POLICY,256
+      - X509_V_FLAG_INHIBIT_ANY,512
+      - X509_V_FLAG_INHIBIT_MAP,1024
+      - X509_V_FLAG_NOTIFY_POLICY,2048
+      - X509_V_FLAG_EXTENDED_CRL_SUPPORT,4096
+      - X509_V_FLAG_USE_DELTAS,8192
+      - X509_V_FLAG_CHECK_SS_SIGNATURE,16384
+      - X509_V_FLAG_TRUSTED_FIRST,32768
+      - X509_V_FLAG_SUITEB_128_LOS_ONLY,65536
+      - X509_V_FLAG_SUITEB_192_LOS,131072
+      - X509_V_FLAG_SUITEB_128_LOS,196608
+      - X509_V_FLAG_PARTIAL_CHAIN,524288
+      - X509_V_FLAG_NO_ALT_CHAINS,1048576
+      - X509_V_FLAG_NO_CHECK_TIME,2097152
+  - name: ossl_statem_st::request_state
+    special_flag: 0
+    val_name:
+      - TLS_ST_BEFORE,0
+      - TLS_ST_OK,1
+      - DTLS_ST_CR_HELLO_VERIFY_REQUEST,2
+      - TLS_ST_CR_SRVR_HELLO,3
+      - TLS_ST_CR_CERT,4
+      - TLS_ST_CR_CERT_STATUS,5
+      - TLS_ST_CR_KEY_EXCH,6
+      - TLS_ST_CR_CERT_REQ,7
+      - TLS_ST_CR_SRVR_DONE,8
+      - TLS_ST_CR_SESSION_TICKET,9
+      - TLS_ST_CR_CHANGE,10
+      - TLS_ST_CR_FINISHED,11
+      - TLS_ST_CW_CLNT_HELLO,12
+      - TLS_ST_CW_CERT,13
+      - TLS_ST_CW_KEY_EXCH,14
+      - TLS_ST_CW_CERT_VRFY,15
+      - TLS_ST_CW_CHANGE,16
+      - TLS_ST_CW_NEXT_PROTO,17
+      - TLS_ST_CW_FINISHED,18
+      - TLS_ST_SW_HELLO_REQ,19
+      - TLS_ST_SR_CLNT_HELLO,20
+      - DTLS_ST_SW_HELLO_VERIFY_REQUEST,21
+      - TLS_ST_SW_SRVR_HELLO,22
+      - TLS_ST_SW_CERT,23
+      - TLS_ST_SW_KEY_EXCH,24
+      - TLS_ST_SW_CERT_REQ,25
+      - TLS_ST_SW_SRVR_DONE,26
+      - TLS_ST_SR_CERT,27
+      - TLS_ST_SR_KEY_EXCH,28
+      - TLS_ST_SR_CERT_VRFY,29
+      - TLS_ST_SR_NEXT_PROTO,30
+      - TLS_ST_SR_CHANGE,31
+      - TLS_ST_SR_FINISHED,32
+      - TLS_ST_SW_SESSION_TICKET,33
+      - TLS_ST_SW_CERT_STATUS,34
+      - TLS_ST_SW_CHANGE,35
+      - TLS_ST_SW_FINISHED,36
+      - TLS_ST_SW_ENCRYPTED_EXTENSIONS,37
+      - TLS_ST_CR_ENCRYPTED_EXTENSIONS,38
+      - TLS_ST_CR_CERT_VRFY,39
+      - TLS_ST_SW_CERT_VRFY,40
+      - TLS_ST_CR_HELLO_REQ,41
+      - TLS_ST_SW_KEY_UPDATE,42
+      - TLS_ST_CW_KEY_UPDATE,43
+      - TLS_ST_SR_KEY_UPDATE,44
+      - TLS_ST_CR_KEY_UPDATE,45
+      - TLS_ST_EARLY_DATA,46
+      - TLS_ST_PENDING_EARLY_DATA_END,47
+      - TLS_ST_CW_END_OF_EARLY_DATA,48
+      - TLS_ST_SR_END_OF_EARLY_DATA,49
+  - name: ossl_statem_st::hand_state
+    special_flag: 0
+    val_name:
+      - TLS_ST_BEFORE,0
+      - TLS_ST_OK,1
+      - DTLS_ST_CR_HELLO_VERIFY_REQUEST,2
+      - TLS_ST_CR_SRVR_HELLO,3
+      - TLS_ST_CR_CERT,4
+      - TLS_ST_CR_CERT_STATUS,5
+      - TLS_ST_CR_KEY_EXCH,6
+      - TLS_ST_CR_CERT_REQ,7
+      - TLS_ST_CR_SRVR_DONE,8
+      - TLS_ST_CR_SESSION_TICKET,9
+      - TLS_ST_CR_CHANGE,10
+      - TLS_ST_CR_FINISHED,11
+      - TLS_ST_CW_CLNT_HELLO,12
+      - TLS_ST_CW_CERT,13
+      - TLS_ST_CW_KEY_EXCH,14
+      - TLS_ST_CW_CERT_VRFY,15
+      - TLS_ST_CW_CHANGE,16
+      - TLS_ST_CW_NEXT_PROTO,17
+      - TLS_ST_CW_FINISHED,18
+      - TLS_ST_SW_HELLO_REQ,19
+      - TLS_ST_SR_CLNT_HELLO,20
+      - DTLS_ST_SW_HELLO_VERIFY_REQUEST,21
+      - TLS_ST_SW_SRVR_HELLO,22
+      - TLS_ST_SW_CERT,23
+      - TLS_ST_SW_KEY_EXCH,24
+      - TLS_ST_SW_CERT_REQ,25
+      - TLS_ST_SW_SRVR_DONE,26
+      - TLS_ST_SR_CERT,27
+      - TLS_ST_SR_KEY_EXCH,28
+      - TLS_ST_SR_CERT_VRFY,29
+      - TLS_ST_SR_NEXT_PROTO,30
+      - TLS_ST_SR_CHANGE,31
+      - TLS_ST_SR_FINISHED,32
+      - TLS_ST_SW_SESSION_TICKET,33
+      - TLS_ST_SW_CERT_STATUS,34
+      - TLS_ST_SW_CHANGE,35
+      - TLS_ST_SW_FINISHED,36
+      - TLS_ST_SW_ENCRYPTED_EXTENSIONS,37
+      - TLS_ST_CR_ENCRYPTED_EXTENSIONS,38
+      - TLS_ST_CR_CERT_VRFY,39
+      - TLS_ST_SW_CERT_VRFY,40
+      - TLS_ST_CR_HELLO_REQ,41
+      - TLS_ST_SW_KEY_UPDATE,42
+      - TLS_ST_CW_KEY_UPDATE,43
+      - TLS_ST_SR_KEY_UPDATE,44
+      - TLS_ST_CR_KEY_UPDATE,45
+      - TLS_ST_EARLY_DATA,46
+      - TLS_ST_PENDING_EARLY_DATA_END,47
+      - TLS_ST_CW_END_OF_EARLY_DATA,48
+      - TLS_ST_SR_END_OF_EARLY_DATA,49
+  - name: ssl_st::early_data_state
+    special_flag: 0
+    val_name:
+      - SSL_EARLY_DATA_NONE,0
+      - SSL_EARLY_DATA_CONNECT_RETRY,1
+      - SSL_EARLY_DATA_CONNECTING,2
+      - SSL_EARLY_DATA_WRITE_RETRY,3
+      - SSL_EARLY_DATA_WRITING,4
+      - SSL_EARLY_DATA_WRITE_FLUSH,5
+      - SSL_EARLY_DATA_UNAUTH_WRITING,6
+      - SSL_EARLY_DATA_FINISHED_WRITING,7
+      - SSL_EARLY_DATA_ACCEPT_RETRY,8
+      - SSL_EARLY_DATA_ACCEPTING,9
+      - SSL_EARLY_DATA_READ_RETRY,10
+      - SSL_EARLY_DATA_READING,11
+      - SSL_EARLY_DATA_FINISHED_READING,12
+Unknown:
+  - name: ssl3_record_st::rec_version
+    special_flag: 0
+    val_name:
+  - name: ssl_st::client_version
+    special_flag: 0
+    val_name:
+  - name: ssl_st::version
+    special_flag: 0
+    val_name:
+  - name: ssl_session_st::ssl_version
+    special_flag: 0
+    val_name:
+  - name: asn1_string_st::flags
+    special_flag: 0
+    val_name:
+  - name: asn1_string_st::type
+    special_flag: 0
+    val_name:
+  - name: bignum_st::flags
+    special_flag: 0
+    val_name:
+  - name: (unnamed_class_struct_union)::ssl_version
+    special_flag: 0
+    val_name:
+  - name: (unnamed_class_struct_union)::version
+    special_flag: 0
+    val_name:
+  - name: rsa_st::version
+    special_flag: 0
+    val_name:
+  - name: (unnamed_class_struct_union)::in_read_app_data
+    special_flag: 0
+    val_name:

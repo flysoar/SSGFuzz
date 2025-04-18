@@ -1,0 +1,17 @@
+Type:
+  -
+State:
+  -
+Unknown:
+  - name: _cfg_mapping::flag
+    special_flag: 1
+  - name: _dbg_pid::state
+  - name: _dbt_column::flag
+  - name: _dbt_table::flag
+  - name: _dlgs_item::state
+  - name: _ds_dest::flags
+  - name: yy_buffer_state::yy_buffer_status
+  - name: rval_cache::val_type
+  - name: rval_cache::cache_type
+  - name: (unnamed class_struct_union)::type
+  - 

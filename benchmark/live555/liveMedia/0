@@ -1,0 +1,221 @@
+; ModuleID = 'Locale.cpp'
+source_filename = "Locale.cpp"
+target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-pc-linux-gnu"
+
+%class.Locale = type { i32 (...)**, %struct.__locale_struct*, %struct.__locale_struct* }
+%struct.__locale_struct = type { [13 x %struct.__locale_data*], i16*, i32*, i32*, [13 x i8*] }
+%struct.__locale_data = type opaque
+
+@_ZTV6Locale = dso_local unnamed_addr constant { [4 x i8*] } { [4 x i8*] [i8* null, i8* bitcast ({ i8*, i8* }* @_ZTI6Locale to i8*), i8* bitcast (void (%class.Locale*)* @_ZN6LocaleD2Ev to i8*), i8* bitcast (void (%class.Locale*)* @_ZN6LocaleD0Ev to i8*)] }, align 8
+@_ZTVN10__cxxabiv117__class_type_infoE = external dso_local global i8*
+@_ZTS6Locale = dso_local constant [8 x i8] c"6Locale\00", align 1
+@_ZTI6Locale = dso_local constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8*, i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @_ZTS6Locale, i32 0, i32 0) }, align 8
+
+@_ZN6LocaleC1EPKc14LocaleCategory = dso_local unnamed_addr alias void (%class.Locale*, i8*, i32), void (%class.Locale*, i8*, i32)* @_ZN6LocaleC2EPKc14LocaleCategory
+@_ZN6LocaleD1Ev = dso_local unnamed_addr alias void (%class.Locale*), void (%class.Locale*)* @_ZN6LocaleD2Ev
+
+; Function Attrs: nounwind uwtable
+define dso_local void @_ZN6LocaleC2EPKc14LocaleCategory(%class.Locale* nocapture %0, i8* %1, i32 %2) unnamed_addr #0 align 2 !dbg !35 {
+  call void @llvm.dbg.value(metadata %class.Locale* %0, metadata !53, metadata !DIExpression()), !dbg !59
+  call void @llvm.dbg.value(metadata i8* %1, metadata !55, metadata !DIExpression()), !dbg !59
+  call void @llvm.dbg.value(metadata i32 %2, metadata !56, metadata !DIExpression()), !dbg !59
+  %4 = getelementptr %class.Locale, %class.Locale* %0, i64 0, i32 0, !dbg !60
+  store i32 (...)** bitcast (i8** getelementptr inbounds ({ [4 x i8*] }, { [4 x i8*] }* @_ZTV6Locale, i64 0, inrange i32 0, i64 2) to i32 (...)**), i32 (...)*** %4, align 8, !dbg !60, !tbaa !61
+  %5 = icmp eq i32 %2, 0, !dbg !64
+  %6 = select i1 %5, i32 8127, i32 2, !dbg !64
+  call void @llvm.dbg.value(metadata i32 %6, metadata !57, metadata !DIExpression()), !dbg !65
+  %7 = tail call %struct.__locale_struct* @newlocale(i32 %6, i8* %1, %struct.__locale_struct* null) #4, !dbg !66
+  %8 = getelementptr inbounds %class.Locale, %class.Locale* %0, i64 0, i32 1, !dbg !67
+  store %struct.__locale_struct* %7, %struct.__locale_struct** %8, align 8, !dbg !68, !tbaa !69
+  %9 = tail call %struct.__locale_struct* @uselocale(%struct.__locale_struct* %7) #4, !dbg !73
+  %10 = getelementptr inbounds %class.Locale, %class.Locale* %0, i64 0, i32 2, !dbg !74
+  store %struct.__locale_struct* %9, %struct.__locale_struct** %10, align 8, !dbg !75, !tbaa !76
+  ret void, !dbg !77
+}
+
+; Function Attrs: nounwind
+declare !dbg !10 dso_local %struct.__locale_struct* @newlocale(i32, i8*, %struct.__locale_struct*) local_unnamed_addr #1
+
+; Function Attrs: nounwind
+declare !dbg !22 dso_local %struct.__locale_struct* @uselocale(%struct.__locale_struct*) local_unnamed_addr #1
+
+; Function Attrs: nounwind uwtable
+define dso_local void @_ZN6LocaleD2Ev(%class.Locale* nocapture %0) unnamed_addr #0 align 2 !dbg !78 {
+  call void @llvm.dbg.value(metadata %class.Locale* %0, metadata !80, metadata !DIExpression()), !dbg !81
+  %2 = getelementptr %class.Locale, %class.Locale* %0, i64 0, i32 0, !dbg !82
+  store i32 (...)** bitcast (i8** getelementptr inbounds ({ [4 x i8*] }, { [4 x i8*] }* @_ZTV6Locale, i64 0, inrange i32 0, i64 2) to i32 (...)**), i32 (...)*** %2, align 8, !dbg !82, !tbaa !61
+  %3 = getelementptr inbounds %class.Locale, %class.Locale* %0, i64 0, i32 1, !dbg !83
+  %4 = load %struct.__locale_struct*, %struct.__locale_struct** %3, align 8, !dbg !83, !tbaa !69
+  %5 = icmp eq %struct.__locale_struct* %4, null, !dbg !86
+  br i1 %5, label %11, label %6, !dbg !87
+
+6:                                                ; preds = %1
+  %7 = getelementptr inbounds %class.Locale, %class.Locale* %0, i64 0, i32 2, !dbg !88
+  %8 = load %struct.__locale_struct*, %struct.__locale_struct** %7, align 8, !dbg !88, !tbaa !76
+  %9 = tail call %struct.__locale_struct* @uselocale(%struct.__locale_struct* %8) #4, !dbg !90
+  %10 = load %struct.__locale_struct*, %struct.__locale_struct** %3, align 8, !dbg !91, !tbaa !69
+  tail call void @freelocale(%struct.__locale_struct* %10) #4, !dbg !92
+  br label %11, !dbg !93
+
+11:                                               ; preds = %1, %6
+  ret void, !dbg !94
+}
+
+; Function Attrs: nounwind
+declare !dbg !28 dso_local void @freelocale(%struct.__locale_struct*) local_unnamed_addr #1
+
+; Function Attrs: nounwind uwtable
+define dso_local void @_ZN6LocaleD0Ev(%class.Locale* %0) unnamed_addr #0 align 2 !dbg !95 {
+  call void @llvm.dbg.value(metadata %class.Locale* %0, metadata !97, metadata !DIExpression()), !dbg !98
+  call void @llvm.dbg.value(metadata %class.Locale* %0, metadata !80, metadata !DIExpression()) #4, !dbg !99
+  %2 = getelementptr %class.Locale, %class.Locale* %0, i64 0, i32 0, !dbg !101
+  store i32 (...)** bitcast (i8** getelementptr inbounds ({ [4 x i8*] }, { [4 x i8*] }* @_ZTV6Locale, i64 0, inrange i32 0, i64 2) to i32 (...)**), i32 (...)*** %2, align 8, !dbg !101, !tbaa !61
+  %3 = getelementptr inbounds %class.Locale, %class.Locale* %0, i64 0, i32 1, !dbg !102
+  %4 = load %struct.__locale_struct*, %struct.__locale_struct** %3, align 8, !dbg !102, !tbaa !69
+  %5 = icmp eq %struct.__locale_struct* %4, null, !dbg !103
+  br i1 %5, label %11, label %6, !dbg !104
+
+6:                                                ; preds = %1
+  %7 = getelementptr inbounds %class.Locale, %class.Locale* %0, i64 0, i32 2, !dbg !105
+  %8 = load %struct.__locale_struct*, %struct.__locale_struct** %7, align 8, !dbg !105, !tbaa !76
+  %9 = tail call %struct.__locale_struct* @uselocale(%struct.__locale_struct* %8) #4, !dbg !106
+  %10 = load %struct.__locale_struct*, %struct.__locale_struct** %3, align 8, !dbg !107, !tbaa !69
+  tail call void @freelocale(%struct.__locale_struct* %10) #4, !dbg !108
+  br label %11, !dbg !109
+
+11:                                               ; preds = %1, %6
+  %12 = bitcast %class.Locale* %0 to i8*, !dbg !110
+  tail call void @_ZdlPv(i8* %12) #5, !dbg !110
+  ret void, !dbg !111
+}
+
+; Function Attrs: nobuiltin nounwind
+declare dso_local void @_ZdlPv(i8*) local_unnamed_addr #2
+
+; Function Attrs: nounwind readnone speculatable willreturn
+declare void @llvm.dbg.value(metadata, metadata, metadata) #3
+
+attributes #0 = { nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "frame-pointer"="none" "less-precise-fpmad"="false" "min-legal-vector-width"="0" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "frame-pointer"="none" "less-precise-fpmad"="false" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { nobuiltin nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "frame-pointer"="none" "less-precise-fpmad"="false" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { nounwind readnone speculatable willreturn }
+attributes #4 = { nounwind }
+attributes #5 = { builtin nounwind }
+
+!llvm.dbg.cu = !{!0}
+!llvm.module.flags = !{!31, !32, !33}
+!llvm.ident = !{!34}
+
+!0 = distinct !DICompileUnit(language: DW_LANG_C_plus_plus_14, file: !1, producer: "clang version 10.0.0-4ubuntu1 ", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !2, retainedTypes: !9, splitDebugInlining: false, nameTableKind: None)
+!1 = !DIFile(filename: "Locale.cpp", directory: "/home/flysoar/StatefulFuzz/StaticAnalysis/llvm-instrumentation/live555/liveMedia")
+!2 = !{!3}
+!3 = !DICompositeType(tag: DW_TAG_enumeration_type, name: "LocaleCategory", file: !4, line: 57, baseType: !5, size: 32, elements: !6, identifier: "_ZTS14LocaleCategory")
+!4 = !DIFile(filename: "include/Locale.hh", directory: "/home/flysoar/StatefulFuzz/StaticAnalysis/llvm-instrumentation/live555/liveMedia")
+!5 = !DIBasicType(name: "unsigned int", size: 32, encoding: DW_ATE_unsigned)
+!6 = !{!7, !8}
+!7 = !DIEnumerator(name: "All", value: 0, isUnsigned: true)
+!8 = !DIEnumerator(name: "Numeric", value: 1, isUnsigned: true)
+!9 = !{!10, !22, !25, !28}
+!10 = !DISubprogram(name: "newlocale", scope: !11, file: !11, line: 141, type: !12, flags: DIFlagPrototyped, spFlags: DISPFlagOptimized, retainedNodes: !21)
+!11 = !DIFile(filename: "/usr/include/locale.h", directory: "")
+!12 = !DISubroutineType(types: !13)
+!13 = !{!14, !17, !18, !14}
+!14 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !15, size: 64)
+!15 = !DICompositeType(tag: DW_TAG_structure_type, name: "__locale_struct", file: !16, line: 28, flags: DIFlagFwdDecl, identifier: "_ZTS15__locale_struct")
+!16 = !DIFile(filename: "/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h", directory: "")
+!17 = !DIBasicType(name: "int", size: 32, encoding: DW_ATE_signed)
+!18 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !19, size: 64)
+!19 = !DIDerivedType(tag: DW_TAG_const_type, baseType: !20)
+!20 = !DIBasicType(name: "char", size: 8, encoding: DW_ATE_signed_char)
+!21 = !{}
+!22 = !DISubprogram(name: "uselocale", scope: !11, file: !11, line: 187, type: !23, flags: DIFlagPrototyped, spFlags: DISPFlagOptimized, retainedNodes: !21)
+!23 = !DISubroutineType(types: !24)
+!24 = !{!14, !14}
+!25 = !DIDerivedType(tag: DW_TAG_typedef, name: "locale_t", file: !26, line: 24, baseType: !27)
+!26 = !DIFile(filename: "/usr/include/x86_64-linux-gnu/bits/types/locale_t.h", directory: "")
+!27 = !DIDerivedType(tag: DW_TAG_typedef, name: "__locale_t", file: !16, line: 42, baseType: !14)
+!28 = !DISubprogram(name: "freelocale", scope: !11, file: !11, line: 180, type: !29, flags: DIFlagPrototyped, spFlags: DISPFlagOptimized, retainedNodes: !21)
+!29 = !DISubroutineType(types: !30)
+!30 = !{null, !14}
+!31 = !{i32 7, !"Dwarf Version", i32 4}
+!32 = !{i32 2, !"Debug Info Version", i32 3}
+!33 = !{i32 1, !"wchar_size", i32 4}
+!34 = !{!"clang version 10.0.0-4ubuntu1 "}
+!35 = distinct !DISubprogram(name: "Locale", linkageName: "_ZN6LocaleC2EPKc14LocaleCategory", scope: !36, file: !1, line: 25, type: !46, scopeLine: 25, flags: DIFlagPrototyped | DIFlagAllCallsDescribed, spFlags: DISPFlagDefinition | DISPFlagOptimized, unit: !0, declaration: !45, retainedNodes: !52)
+!36 = distinct !DICompositeType(tag: DW_TAG_class_type, name: "Locale", file: !4, line: 59, size: 192, flags: DIFlagTypePassByReference | DIFlagNonTrivial, elements: !37, vtableHolder: !36)
+!37 = !{!38, !43, !44, !45, !49}
+!38 = !DIDerivedType(tag: DW_TAG_member, name: "_vptr$Locale", scope: !4, file: !4, baseType: !39, size: 64, flags: DIFlagArtificial)
+!39 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !40, size: 64)
+!40 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "__vtbl_ptr_type", baseType: !41, size: 64)
+!41 = !DISubroutineType(types: !42)
+!42 = !{!17}
+!43 = !DIDerivedType(tag: DW_TAG_member, name: "fLocale", scope: !36, file: !4, line: 67, baseType: !25, size: 64, offset: 64)
+!44 = !DIDerivedType(tag: DW_TAG_member, name: "fPrevLocale", scope: !36, file: !4, line: 67, baseType: !25, size: 64, offset: 128)
+!45 = !DISubprogram(name: "Locale", scope: !36, file: !4, line: 61, type: !46, scopeLine: 61, flags: DIFlagPublic | DIFlagPrototyped, spFlags: DISPFlagOptimized)
+!46 = !DISubroutineType(types: !47)
+!47 = !{null, !48, !18, !3}
+!48 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !36, size: 64, flags: DIFlagArtificial | DIFlagObjectPointer)
+!49 = !DISubprogram(name: "~Locale", scope: !36, file: !4, line: 62, type: !50, scopeLine: 62, containingType: !36, virtualIndex: 0, flags: DIFlagPublic | DIFlagPrototyped, spFlags: DISPFlagVirtual | DISPFlagOptimized)
+!50 = !DISubroutineType(types: !51)
+!51 = !{null, !48}
+!52 = !{!53, !55, !56, !57}
+!53 = !DILocalVariable(name: "this", arg: 1, scope: !35, type: !54, flags: DIFlagArtificial | DIFlagObjectPointer)
+!54 = !DIDerivedType(tag: DW_TAG_pointer_type, baseType: !36, size: 64)
+!55 = !DILocalVariable(name: "newLocale", arg: 2, scope: !35, file: !1, line: 25, type: !18)
+!56 = !DILocalVariable(name: "category", arg: 3, scope: !35, file: !1, line: 25, type: !3)
+!57 = !DILocalVariable(name: "categoryMask", scope: !58, file: !1, line: 28, type: !17)
+!58 = distinct !DILexicalBlock(scope: !35, file: !1, line: 25, column: 64)
+!59 = !DILocation(line: 0, scope: !35)
+!60 = !DILocation(line: 25, column: 64, scope: !35)
+!61 = !{!62, !62, i64 0}
+!62 = !{!"vtable pointer", !63, i64 0}
+!63 = !{!"Simple C++ TBAA"}
+!64 = !DILocation(line: 29, column: 3, scope: !58)
+!65 = !DILocation(line: 0, scope: !58)
+!66 = !DILocation(line: 33, column: 13, scope: !58)
+!67 = !DILocation(line: 33, column: 3, scope: !58)
+!68 = !DILocation(line: 33, column: 11, scope: !58)
+!69 = !{!70, !71, i64 8}
+!70 = !{!"_ZTS6Locale", !71, i64 8, !71, i64 16}
+!71 = !{!"any pointer", !72, i64 0}
+!72 = !{!"omnipotent char", !63, i64 0}
+!73 = !DILocation(line: 34, column: 17, scope: !58)
+!74 = !DILocation(line: 34, column: 3, scope: !58)
+!75 = !DILocation(line: 34, column: 15, scope: !58)
+!76 = !{!70, !71, i64 16}
+!77 = !DILocation(line: 44, column: 1, scope: !35)
+!78 = distinct !DISubprogram(name: "~Locale", linkageName: "_ZN6LocaleD2Ev", scope: !36, file: !1, line: 46, type: !50, scopeLine: 46, flags: DIFlagPrototyped | DIFlagAllCallsDescribed, spFlags: DISPFlagDefinition | DISPFlagOptimized, unit: !0, declaration: !49, retainedNodes: !79)
+!79 = !{!80}
+!80 = !DILocalVariable(name: "this", arg: 1, scope: !78, type: !54, flags: DIFlagArtificial | DIFlagObjectPointer)
+!81 = !DILocation(line: 0, scope: !78)
+!82 = !DILocation(line: 46, column: 19, scope: !78)
+!83 = !DILocation(line: 49, column: 7, scope: !84)
+!84 = distinct !DILexicalBlock(scope: !85, file: !1, line: 49, column: 7)
+!85 = distinct !DILexicalBlock(scope: !78, file: !1, line: 46, column: 19)
+!86 = !DILocation(line: 49, column: 15, scope: !84)
+!87 = !DILocation(line: 49, column: 7, scope: !85)
+!88 = !DILocation(line: 50, column: 15, scope: !89)
+!89 = distinct !DILexicalBlock(scope: !84, file: !1, line: 49, column: 31)
+!90 = !DILocation(line: 50, column: 5, scope: !89)
+!91 = !DILocation(line: 51, column: 16, scope: !89)
+!92 = !DILocation(line: 51, column: 5, scope: !89)
+!93 = !DILocation(line: 52, column: 3, scope: !89)
+!94 = !DILocation(line: 60, column: 1, scope: !78)
+!95 = distinct !DISubprogram(name: "~Locale", linkageName: "_ZN6LocaleD0Ev", scope: !36, file: !1, line: 46, type: !50, scopeLine: 46, flags: DIFlagPrototyped | DIFlagAllCallsDescribed, spFlags: DISPFlagDefinition | DISPFlagOptimized, unit: !0, declaration: !49, retainedNodes: !96)
+!96 = !{!97}
+!97 = !DILocalVariable(name: "this", arg: 1, scope: !95, type: !54, flags: DIFlagArtificial | DIFlagObjectPointer)
+!98 = !DILocation(line: 0, scope: !95)
+!99 = !DILocation(line: 0, scope: !78, inlinedAt: !100)
+!100 = distinct !DILocation(line: 46, column: 19, scope: !95)
+!101 = !DILocation(line: 46, column: 19, scope: !78, inlinedAt: !100)
+!102 = !DILocation(line: 49, column: 7, scope: !84, inlinedAt: !100)
+!103 = !DILocation(line: 49, column: 15, scope: !84, inlinedAt: !100)
+!104 = !DILocation(line: 49, column: 7, scope: !85, inlinedAt: !100)
+!105 = !DILocation(line: 50, column: 15, scope: !89, inlinedAt: !100)
+!106 = !DILocation(line: 50, column: 5, scope: !89, inlinedAt: !100)
+!107 = !DILocation(line: 51, column: 16, scope: !89, inlinedAt: !100)
+!108 = !DILocation(line: 51, column: 5, scope: !89, inlinedAt: !100)
+!109 = !DILocation(line: 52, column: 3, scope: !89, inlinedAt: !100)
+!110 = !DILocation(line: 46, column: 19, scope: !95)
+!111 = !DILocation(line: 60, column: 1, scope: !95)

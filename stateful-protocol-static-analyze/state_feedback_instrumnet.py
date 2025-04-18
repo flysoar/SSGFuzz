@@ -78,7 +78,6 @@ class StateInrustment:
         codeql_result.value_start_column = content['StartColumn']
         codeql_result.value_end_line = content['EndLine']
         codeql_result.value_end_column = content['EndColumn']
-        #codeql_result.state_value = content['VariableString']
 
         self.records.append(codeql_result)
 
@@ -129,7 +128,6 @@ class StateInrustment:
                     content += lines[i - 1]
             return str(content, encoding='utf-8')
         
-    #由于无法直接通过codeql获取到变量在使用时的字符串，所以需要通过文件读取的方式获取
     def deal_codeql_result(self):
         for record in self.records:
             expr = self.get_content_from_file(record.file_name, record.value_start_line,

@@ -8,7 +8,6 @@
 import cpp
 import StateVal
 
-//获取被调用函数的总代码行数
 language[monotonicAggregates]
 int functionContainCoL(Function f) {
   if exists(int c | c = f.getMetrics().getNumberOfLinesOfCode())
@@ -28,7 +27,6 @@ int functionContainCoL(Function f) {
   else result = 0
 }
 
-//获取被调用函数的总圈复杂度
 language[monotonicAggregates]
 int functionContainCC(Function f) {
   if exists(int c | c = f.getMetrics().getCyclomaticComplexity())
@@ -48,7 +46,6 @@ int functionContainCC(Function f) {
   else result = 0
 }
 
-//获取被调用函数的N1
 language[monotonicAggregates]
 int functionContainN1(Function f) {
   if exists(int c | c = f.getMetrics().getHalsteadN1())
@@ -68,7 +65,7 @@ int functionContainN1(Function f) {
   else result = 0
 }
 
-//获取被调用函数的N2
+
 language[monotonicAggregates]
 int functionContainN2(Function f) {
   if exists(int c | c = f.getMetrics().getHalsteadN2())
@@ -89,7 +86,7 @@ int functionContainN2(Function f) {
 }
 
 
-//获取被调用函数的n1
+
 language[monotonicAggregates]
 int functionContainN1D(Function f) {
   if exists(int c | c = f.getMetrics().getHalsteadN1Distinct())
@@ -109,7 +106,7 @@ int functionContainN1D(Function f) {
   else result = 0
 }
 
-//获取被调用函数的n2
+
 language[monotonicAggregates]
 int functionContainN2D(Function f) {
   if exists(int c | c = f.getMetrics().getHalsteadN2Distinct())
@@ -130,7 +127,7 @@ int functionContainN2D(Function f) {
 }
 
 
-//获取一个stmt中的代码行数
+
 int stmtDoCol(Stmt stmt) {
   result =
     stmtCoL(stmt) +
@@ -145,7 +142,7 @@ int stmtDoCol(Stmt stmt) {
       )
 }
 
-//获取一个stmt中的圈复杂度
+
 int stmtDoCC(Stmt stmt) {
   result = 0 +
       sum(Function f |
@@ -159,7 +156,7 @@ int stmtDoCC(Stmt stmt) {
       )
 }
 
-//获取一个stmt中的N1
+
 int stmtDoN1(Stmt stmt) {
   result = 0 +
       sum(Function f |
@@ -173,7 +170,7 @@ int stmtDoN1(Stmt stmt) {
       )
 }
 
-//获取一个stmt中的N2
+
 int stmtDoN2(Stmt stmt) {
   result = 0 +
       sum(Function f |
@@ -187,7 +184,7 @@ int stmtDoN2(Stmt stmt) {
       )
 }
 
-//获取一个stmt中的N1D
+
 int stmtDoN1D(Stmt stmt) {
   result = 0 +
       sum(Function f |
@@ -202,7 +199,7 @@ int stmtDoN1D(Stmt stmt) {
 }
 
 
-//获取一个stmt中的N2D
+
 int stmtDoN2D(Stmt stmt) {
   result = 0 +
       sum(Function f |
@@ -221,7 +218,7 @@ int stmtCoL(Stmt stmt) {
   result = 1 + sum(Stmt substmt | substmt = stmt.getAChild() | stmtCoL(substmt))
 }
 
-//获取IF中True分支的代码行数
+
 int ifTrueCoL(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof IfStmt and
   exists(Stmt stmt |
@@ -231,7 +228,7 @@ int ifTrueCoL(VariableAccess ac, Expr scope) {
   scope = ac.getEnclosingElement().(ComparisonOperation).getRightOperand()
 }
 
-//获取IF中True分支的圈复杂度
+
 int ifTrueCC(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof IfStmt and
   exists(Stmt stmt |
@@ -241,7 +238,7 @@ int ifTrueCC(VariableAccess ac, Expr scope) {
   scope = ac.getEnclosingElement().(ComparisonOperation).getRightOperand()
 }
 
-//获取IF中True分支的N1
+
 int ifTrueN1(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof IfStmt and
   exists(Stmt stmt |
@@ -251,7 +248,7 @@ int ifTrueN1(VariableAccess ac, Expr scope) {
   scope = ac.getEnclosingElement().(ComparisonOperation).getRightOperand()
 }
 
-//获取IF中True分支的N2
+
 int ifTrueN2(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof IfStmt and
   exists(Stmt stmt |
@@ -261,7 +258,7 @@ int ifTrueN2(VariableAccess ac, Expr scope) {
   scope = ac.getEnclosingElement().(ComparisonOperation).getRightOperand()
 }
 
-//获取IF中True分支的N1D
+
 int ifTrueN1D(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof IfStmt and
   exists(Stmt stmt |
@@ -271,7 +268,7 @@ int ifTrueN1D(VariableAccess ac, Expr scope) {
   scope = ac.getEnclosingElement().(ComparisonOperation).getRightOperand()
 }
 
-//获取IF中True分支的N2D
+
 int ifTrueN2D(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof IfStmt and
   exists(Stmt stmt |
@@ -281,7 +278,7 @@ int ifTrueN2D(VariableAccess ac, Expr scope) {
   scope = ac.getEnclosingElement().(ComparisonOperation).getRightOperand()
 }
 
-//获取IF中False分支的代码行数
+
 int ifFalseCoL(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof IfStmt and
   exists(Stmt stmt |
@@ -291,7 +288,7 @@ int ifFalseCoL(VariableAccess ac, Expr scope) {
   scope = ac.getEnclosingElement().(ComparisonOperation).getRightOperand()
 }
 
-//获取IF中False分支的圈复杂度
+
 int ifFalseCC(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof IfStmt and
   exists(Stmt stmt |
@@ -301,7 +298,7 @@ int ifFalseCC(VariableAccess ac, Expr scope) {
   scope = ac.getEnclosingElement().(ComparisonOperation).getRightOperand()
 }
 
-//获取IF中False分支的N1
+
 int ifFalseN1(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof IfStmt and
   exists(Stmt stmt |
@@ -311,7 +308,7 @@ int ifFalseN1(VariableAccess ac, Expr scope) {
   scope = ac.getEnclosingElement().(ComparisonOperation).getRightOperand()
 }
 
-//获取IF中False分支的N2
+
 int ifFalseN2(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof IfStmt and
   exists(Stmt stmt |
@@ -321,7 +318,7 @@ int ifFalseN2(VariableAccess ac, Expr scope) {
   scope = ac.getEnclosingElement().(ComparisonOperation).getRightOperand()
 }
 
-//获取IF中False分支的N1D
+
 int ifFalseN1D(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof IfStmt and
   exists(Stmt stmt |
@@ -331,7 +328,7 @@ int ifFalseN1D(VariableAccess ac, Expr scope) {
   scope = ac.getEnclosingElement().(ComparisonOperation).getRightOperand()
 }
 
-//获取IF中False分支的N2D
+
 int ifFalseN2D(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof IfStmt and
   exists(Stmt stmt |
@@ -341,7 +338,7 @@ int ifFalseN2D(VariableAccess ac, Expr scope) {
   scope = ac.getEnclosingElement().(ComparisonOperation).getRightOperand()
 }
 
-//获取Switch中的代码行数
+
 int switchCoL(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof SwitchStmt and
   exists(SwitchCase case |
@@ -352,7 +349,7 @@ int switchCoL(VariableAccess ac, Expr scope) {
   )
 }
 
-//获取Switch中的圈复杂度
+
 int switchCC(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof SwitchStmt and
   exists(SwitchCase case |
@@ -363,7 +360,7 @@ int switchCC(VariableAccess ac, Expr scope) {
   )
 }
 
-//获取Switch中的N1
+
 int switchN1(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof SwitchStmt and
   exists(SwitchCase case |
@@ -374,7 +371,7 @@ int switchN1(VariableAccess ac, Expr scope) {
   )
 }
 
-//获取Switch中的N2
+
 int switchN2(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof SwitchStmt and
   exists(SwitchCase case |
@@ -385,7 +382,7 @@ int switchN2(VariableAccess ac, Expr scope) {
   )
 }
 
-//获取Switch中的N1D
+
 int switchN1D(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof SwitchStmt and
   exists(SwitchCase case |
@@ -396,7 +393,7 @@ int switchN1D(VariableAccess ac, Expr scope) {
   )
 }
 
-//获取Switch中的N2
+
 int switchN2D(VariableAccess ac, Expr scope) {
   ac.getEnclosingStmt() instanceof SwitchStmt and
   exists(SwitchCase case |

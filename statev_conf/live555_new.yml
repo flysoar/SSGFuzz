@@ -1,0 +1,55 @@
+Type:
+  - 
+State:
+  - name: MPEGProgramStreamParser::fCurrentParseState
+    special_flag: 0
+    val_name:
+      - PARSING_PACK_HEADER,0
+      - PARSING_SYSTEM_HEADER,1
+      - PARSING_PES_PACKET,2
+  - name: MPEG1or2VideoStreamParser::fCurrentParseState
+    special_flag: 0
+    val_name:
+      - PARSING_VIDEO_SEQUENCE_HEADER,0
+      - PARSING_VIDEO_SEQUENCE_HEADER_SEEN_CODE,1
+      - PARSING_GOP_HEADER,2
+      - PARSING_GOP_HEADER_SEEN_CODE,3
+      - PARSING_PICTURE_HEADER,4
+      - PARSING_SLICE,5
+  - name: MPEG4VideoStreamParser::fCurrentParseState
+    special_flag: 0
+    val_name:
+      - PARSING_VISUAL_OBJECT_SEQUENCE,0
+      - PARSING_VISUAL_OBJECT_SEQUENCE_SEEN_CODE,1
+      - PARSING_VISUAL_OBJECT,2
+      - PARSING_VIDEO_OBJECT_LAYER,3
+      - PARSING_GROUP_OF_VIDEO_OBJECT_PLANE,4
+      - PARSING_VIDEO_OBJECT_PLANE,5
+      - PARSING_VISUAL_OBJECT_SEQUENCE_END_CODE,6
+  - name: MatroskaFileParser::fCurrentParseState
+    special_flag: 0
+    val_name:
+      - PARSING_START_OF_FILE,0
+      - LOOKING_FOR_TRACKS,1
+      - PARSING_TRACK,2
+      - PARSING_CUES,3
+      - LOOKING_FOR_CLUSTER,4
+      - LOOKING_FOR_BLOCK,5
+      - PARSING_BLOCK,6
+      - DELIVERING_FRAME_WITHIN_BLOCK,7
+      - DELIVERING_FRAME_BYTES,8
+  - name: SIPClient::fInviteClientState
+    special_flag: 0
+    val_name:
+      - Calling,0
+      - Proceeding,1
+      - Completed,2
+      - Terminated,3
+  - name: OggFileParser::fCurrentParseState
+    special_flag: 0
+    val_name:
+      - PARSING_START_OF_FILE,0
+      - PARSING_AND_DELIVERING_PAGES,1
+      - DELIVERING_PACKET_WITHIN_PAGE,2
+Unknown:
+  -

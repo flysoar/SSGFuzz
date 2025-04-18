@@ -1,0 +1,1119 @@
+[
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 3,
+                "state_id": 1,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 7,
+                "state_id": 1,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 1,
+                "state_id": 1,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 2,
+                "state_id": 1,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 8,
+                "state_id": 1,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 9,
+                "state_id": 1,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 10,
+                "state_id": 1,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [
+                    {
+                        "name": "tpl_node::type",
+                        "value": 5,
+                        "state_id": 1
+                    }
+                ],
+                "value": 11,
+                "state_id": 1,
+                "name": "",
+                "metric_cc": 61.37534329288764,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 63,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [
+                    {
+                        "name": "tpl_node::type",
+                        "value": 5,
+                        "state_id": 1
+                    }
+                ],
+                "value": 6,
+                "state_id": 1,
+                "name": "",
+                "metric_cc": 73.90288372553084,
+                "metric_to": 0,
+                "metric_io": 1,
+                "code_weight": 150,
+                "variable_weight": 2
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [
+                    {
+                        "name": "tpl_node::type",
+                        "value": 5,
+                        "state_id": 1
+                    }
+                ],
+                "value": 4,
+                "state_id": 1,
+                "name": "",
+                "metric_cc": 74.00575745837988,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 175,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 12,
+                "state_id": 1,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 5,
+                "code_weight": 111,
+                "variable_weight": 18
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [
+                    {
+                        "name": "tpl_node::type",
+                        "value": 0,
+                        "state_id": 1
+                    },
+                    {
+                        "name": "tpl_node::type",
+                        "value": 5,
+                        "state_id": 1
+                    }
+                ],
+                "value": 5,
+                "state_id": 1,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 5,
+                "code_weight": 790,
+                "variable_weight": 30
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 1,
+                "name": "",
+                "metric_cc": 45.43605770897079,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 17,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "tpl_node::type",
+        "state_id": 1,
+        "state_type": 2,
+        "code_weight": 89,
+        "variable_weight": 12,
+        "default_code_weight": 87,
+        "default_variable_weight": 18,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 2,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 1,
+                "metric_io": 0,
+                "code_weight": 6,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 1,
+                "state_id": 2,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 1,
+                "metric_io": 0,
+                "code_weight": 8,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "class_struc::cls_satisfy",
+        "state_id": 2,
+        "state_type": 1,
+        "code_weight": 7,
+        "variable_weight": 0,
+        "default_code_weight": 7,
+        "default_variable_weight": 0,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 6,
+                "state_id": 3,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 2,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 4,
+                "state_id": 3,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 2,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 12,
+                "state_id": 3,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 2,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 3,
+                "state_id": 3,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 2,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 3,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 2,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 1,
+                "state_id": 3,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 2,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 2,
+                "state_id": 3,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 2,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 5,
+                "state_id": 3,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 2,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 7,
+                "state_id": 3,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 2,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 8,
+                "state_id": 3,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 2,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 9,
+                "state_id": 3,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 2,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 10,
+                "state_id": 3,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 2,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 11,
+                "state_id": 3,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 2,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "(unnamed_class_struct_union)::disconnect_reason",
+        "state_id": 3,
+        "state_type": 1,
+        "code_weight": 10,
+        "variable_weight": 2,
+        "default_code_weight": 2,
+        "default_variable_weight": 10,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 1,
+                "state_id": 4,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 2,
+                "state_id": 4,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 3,
+                "state_id": 4,
+                "name": "",
+                "metric_cc": 14.623537867980602,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 3,
+                "variable_weight": 1
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 4,
+                "state_id": 4,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 5,
+                "state_id": 4,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 6,
+                "state_id": 4,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 4,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "(unnamed_class_struct_union)::curr_phase",
+        "state_id": 4,
+        "state_type": 2,
+        "code_weight": 0,
+        "variable_weight": 1,
+        "default_code_weight": 3,
+        "default_variable_weight": 1,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": -17,
+                "state_id": 5,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": -33,
+                "state_id": 5,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 16,
+                "state_id": 5,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 32,
+                "state_id": 5,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 1863,
+                "state_id": 5,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 5,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 2,
+                "state_id": 5,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "(unnamed_class_struct_union)::sf_flags",
+        "state_id": 5,
+        "state_type": 1,
+        "code_weight": 0,
+        "variable_weight": 0,
+        "default_code_weight": 0,
+        "default_variable_weight": 0,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 2,
+                "state_id": 6,
+                "name": "",
+                "metric_cc": 77.70975238043876,
+                "metric_to": 1,
+                "metric_io": 1,
+                "code_weight": 183,
+                "variable_weight": 20
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 1,
+                "state_id": 6,
+                "name": "",
+                "metric_cc": 84.57099702669058,
+                "metric_to": 1,
+                "metric_io": 1,
+                "code_weight": 218,
+                "variable_weight": 27
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 6,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 2,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 3,
+                "state_id": 6,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 4,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "(unnamed_class_struct_union)::xfer_type",
+        "state_id": 6,
+        "state_type": 2,
+        "code_weight": 112,
+        "variable_weight": 8,
+        "default_code_weight": 41,
+        "default_variable_weight": 23,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 128,
+                "state_id": 7,
+                "name": "",
+                "metric_cc": 80.46615220953448,
+                "metric_to": 1,
+                "metric_io": 0,
+                "code_weight": 179,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 256,
+                "state_id": 7,
+                "name": "",
+                "metric_cc": 80.46615220953448,
+                "metric_to": 1,
+                "metric_io": 0,
+                "code_weight": 179,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 7,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 1,
+                "metric_io": 0,
+                "code_weight": 6,
+                "variable_weight": 1
+            }
+        ],
+        "flag_list": [
+            "CL_NONE",
+            "CL_AUTH",
+            "CL_INFO",
+            "CL_DIRS",
+            "CL_READ",
+            "CL_WRITE",
+            "CL_MISC",
+            "CL_SEC",
+            "CL_CONNECT",
+            "CL_DISCONNECT",
+            "CL_SSH",
+            "CL_SFTP"
+        ],
+        "name": "cmd_struc::cmd_class",
+        "state_id": 7,
+        "state_type": 2,
+        "code_weight": 64,
+        "variable_weight": 1,
+        "default_code_weight": 100,
+        "default_variable_weight": 1,
+        "special_flag": 1,
+        "texted_flag": 1
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [
+                    {
+                        "name": "conn_struc::mode",
+                        "value": 1,
+                        "state_id": 8
+                    }
+                ],
+                "value": 0,
+                "state_id": 8,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 1,
+                "metric_io": 0,
+                "code_weight": 2,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [
+                    {
+                        "name": "conn_struc::mode",
+                        "value": 1,
+                        "state_id": 8
+                    },
+                    {
+                        "name": "conn_struc::mode",
+                        "value": 4,
+                        "state_id": 8
+                    }
+                ],
+                "value": 3,
+                "state_id": 8,
+                "name": "",
+                "metric_cc": 60.834105973440714,
+                "metric_to": 1,
+                "metric_io": 2,
+                "code_weight": 53,
+                "variable_weight": 2
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [
+                    {
+                        "name": "conn_struc::mode",
+                        "value": 1,
+                        "state_id": 8
+                    },
+                    {
+                        "name": "conn_struc::mode",
+                        "value": 4,
+                        "state_id": 8
+                    },
+                    {
+                        "name": "conn_struc::mode",
+                        "value": 6,
+                        "state_id": 8
+                    }
+                ],
+                "value": 1,
+                "state_id": 8,
+                "name": "",
+                "metric_cc": 63.71327780357905,
+                "metric_to": 1,
+                "metric_io": 2,
+                "code_weight": 81,
+                "variable_weight": 2
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 6,
+                "state_id": 8,
+                "name": "",
+                "metric_cc": 31.703987249805294,
+                "metric_to": 1,
+                "metric_io": 2,
+                "code_weight": 10,
+                "variable_weight": 2
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 2,
+                "state_id": 8,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 4,
+                "state_id": 8,
+                "name": "",
+                "metric_cc": 34.665853016126604,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 14,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "conn_struc::mode",
+        "state_id": 8,
+        "state_type": 1,
+        "code_weight": 31,
+        "variable_weight": 3,
+        "default_code_weight": 34,
+        "default_variable_weight": 2,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 9,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "facts_opts",
+        "state_id": 9,
+        "state_type": 1,
+        "code_weight": 0,
+        "variable_weight": 0,
+        "default_code_weight": 0,
+        "default_variable_weight": 0,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 0,
+                "state_id": 10,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 1,
+                "metric_io": 0,
+                "code_weight": 8,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 1,
+                "state_id": 10,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 1,
+                "metric_io": 0,
+                "code_weight": 8,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 2,
+                "state_id": 10,
+                "name": "",
+                "metric_cc": 36.43132635577303,
+                "metric_to": 1,
+                "metric_io": 0,
+                "code_weight": 24,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 3,
+                "state_id": 10,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 1,
+                "metric_io": 0,
+                "code_weight": 20,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 4,
+                "state_id": 10,
+                "name": "",
+                "metric_cc": 33.829246825474,
+                "metric_to": 1,
+                "metric_io": 0,
+                "code_weight": 20,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 5,
+                "state_id": 10,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 1,
+                "metric_io": 0,
+                "code_weight": 20,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 6,
+                "state_id": 10,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 1,
+                "metric_io": 0,
+                "code_weight": 24,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "pr_netacl_t::type",
+        "state_id": 10,
+        "state_type": 2,
+        "code_weight": 17,
+        "variable_weight": 0,
+        "default_code_weight": 20,
+        "default_variable_weight": 0,
+        "special_flag": 0,
+        "texted_flag": 0
+    },
+    {
+        "state_list": [
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 4294966271,
+                "state_id": 11,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 4294966783,
+                "state_id": 11,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 4294967039,
+                "state_id": 11,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 4294967287,
+                "state_id": 11,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 4294967279,
+                "state_id": 11,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 4294967263,
+                "state_id": 11,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 4294967231,
+                "state_id": 11,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 4294967167,
+                "state_id": 11,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 4294967294,
+                "state_id": 11,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 4294967293,
+                "state_id": 11,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            },
+            {
+                "next_statevalue": [],
+                "compare_relation_statevalue": [],
+                "value": 4294967291,
+                "state_id": 11,
+                "name": "",
+                "metric_cc": 100,
+                "metric_to": 0,
+                "metric_io": 0,
+                "code_weight": 0,
+                "variable_weight": 0
+            }
+        ],
+        "flag_list": [],
+        "name": "recvd_signal_flags",
+        "state_id": 11,
+        "state_type": 1,
+        "code_weight": 0,
+        "variable_weight": 0,
+        "default_code_weight": 0,
+        "default_variable_weight": 0,
+        "special_flag": 0,
+        "texted_flag": 0
+    }
+]

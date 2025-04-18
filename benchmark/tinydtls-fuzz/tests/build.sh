@@ -1,0 +1,2 @@
+make ../libtinydtls.a
+make
